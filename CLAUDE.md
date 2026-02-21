@@ -110,6 +110,23 @@ node scripts/crawl-app.mjs --slug uniswap --wallet
 node scripts/crawl-app.mjs --all
 ```
 
+### Browser Use MCP (Playwright fallback)
+
+When the local Playwright crawler (`crawl-app.mjs`) fails — e.g. bot detection, CAPTCHA walls, Cloudflare challenges, or CI environment issues — a cloud browser fallback is available via the **Browser Use MCP**.
+
+- **What it is:** A cloud-hosted browser automation API (browser-use.com) exposed as an MCP server
+- **When to use it:** Only when Playwright fails. Not a replacement for the local pipeline.
+- **How it's configured:** MCP server entry in `~/.claude.json` under the Darkscreen project (API key stored there, not in the repo)
+- **Cost:** ~$0.006 per step (vs $0.00 for local Playwright)
+- **Available tools:** `browser_task`, `monitor_task`, `list_browser_profiles`, `list_skills`, `get_cookies`
+
+**Typical fallback workflow:**
+1. Playwright crawl fails for an app (bot detection, network error, etc.)
+2. Use `browser_task` to visit the app URL in a cloud browser and capture the needed information
+3. The cloud browser has its own stealth/fingerprinting, so it often bypasses blocks that trip up local Playwright
+
+**Important:** This is a paid API. Always try the local Playwright crawler first. Only fall back to Browser Use when Playwright cannot complete the job.
+
 ## App Logos
 
 Every app in `apps.ts` has a corresponding logo at `/public/logos/{slug}.png`. Logos are displayed across 4 surfaces via the `AppLogo` component.

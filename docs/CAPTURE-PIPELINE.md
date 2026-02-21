@@ -407,3 +407,62 @@ All optional. The pipeline works with zero configuration for public apps.
 **MetaMask not connecting:** Run `node scripts/wallet-setup.mjs` to reset the MetaMask profile. Make sure the extension directory exists at `scripts/wallets/metamask-extension/`.
 
 **Labeling puts screens in the wrong flow:** The classification is based on URL patterns. If an app uses unusual URLs (e.g., `/app/earn` instead of `/earn`), the patterns in `label-local.mjs` may need updating.
+
+---
+
+## Fallback: Browser Use MCP (Cloud Browser)
+
+When the local Playwright crawler fails, a cloud-based browser fallback is available via the **Browser Use** MCP server (browser-use.com).
+
+### Why it exists
+
+Some sites actively block automated browsers. Common failure modes for local Playwright:
+
+| Failure | Symptom | Why Browser Use helps |
+|---------|---------|----------------------|
+| Cloudflare challenge | Playwright gets stuck on "Checking your browser" | Cloud browser has different fingerprint |
+| Advanced bot detection | Empty page, instant redirect to CAPTCHA | Cloud browser rotates IPs and fingerprints |
+| CI environment blocks | Headless Chrome detected and blocked | Cloud browser runs in a full desktop environment |
+| Geo-restricted content | 403 or region-locked page | Cloud browser exits from US data centers |
+
+### How it's configured
+
+The MCP server is configured in `~/.claude.json` under the Darkscreen project entry. The API key is stored there (not in the repo, not committed to git). It connects via `npx mcp-remote` to the Browser Use API.
+
+### Available tools
+
+| Tool | Purpose |
+|------|---------|
+| `browser_task` | Run a browser automation task (visit URL, click, extract data) |
+| `monitor_task` | Poll task progress and get results |
+| `list_browser_profiles` | List saved cloud browser profiles (for authenticated sites) |
+| `list_skills` | List pre-built automation skills |
+| `get_cookies` | Extract cookies from a browser profile |
+
+### When to use it
+
+1. **Try Playwright first.** It's free and local.
+2. **If Playwright fails**, use `browser_task` to visit the same URL in a cloud browser.
+3. **For investigation**, use it to check what a site looks like from a clean browser (no extensions, fresh IP).
+
+### Cost
+
+~$0.006 per browser step. A simple page visit is 1-2 steps (~$0.01). A multi-page crawl of 10 steps costs ~$0.06. Always prefer the free local Playwright crawler.
+
+### Example: Fallback crawl
+
+```
+# 1. Playwright fails
+node scripts/crawl-app.mjs --slug someapp
+# Error: Page blocked by Cloudflare challenge
+
+# 2. Fall back to Browser Use via Claude Code
+# Ask Claude: "Use browser_task to visit https://someapp.com and describe what you see"
+# Claude uses the MCP tool to visit the site in a cloud browser
+```
+
+### What it can NOT do
+
+- It does not integrate with the local pipeline (label → sync → tag). It's for ad-hoc investigation and manual fallback, not automated batch crawling.
+- Screenshots taken by Browser Use are not automatically saved to `public/screenshots/`.
+- It has no access to MetaMask or saved login profiles from the local Playwright setup.
