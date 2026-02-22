@@ -1,33 +1,63 @@
 {
   "slug": "backpack",
-  "url": "https://backpack.app",
-  "crawledAt": "2026-02-14T03:04:47.675Z",
-  "totalScreenshots": 4,
-  "totalStates": 4,
+  "url": "",
+  "crawledAt": "2026-02-22T02:26:30.076Z",
+  "totalScreenshots": 9,
+  "totalStates": 9,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/backpack-home-1-landing-page.png"
+      "image": "/screenshots/backpack-home-1-homepage.png"
     },
     {
       "step": 2,
+      "label": "News",
+      "flow": "Home",
+      "image": "/screenshots/backpack-home-2-news.png"
+    },
+    {
+      "step": 3,
       "label": "Download",
       "flow": "Home",
-      "image": "/screenshots/backpack-home-2-download.png"
+      "image": "/screenshots/backpack-home-3-download.png"
+    },
+    {
+      "step": 4,
+      "label": "Careers",
+      "flow": "Home",
+      "image": "/screenshots/backpack-home-4-careers.png"
     },
     {
       "step": 1,
+      "label": "Exchange",
+      "flow": "Swap",
+      "image": "/screenshots/backpack-swap-1-exchange.png"
+    },
+    {
+      "step": 1,
+      "label": "Learn",
+      "flow": "Settings",
+      "image": "/screenshots/backpack-settings-1-learn.png"
+    },
+    {
+      "step": 2,
+      "label": "Support",
+      "flow": "Settings",
+      "image": "/screenshots/backpack-settings-2-support.png"
+    },
+    {
+      "step": 3,
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/backpack-settings-3-about.png"
+    },
+    {
+      "step": 4,
       "label": "Terms",
       "flow": "Settings",
-      "image": "/screenshots/backpack-settings-1-terms.png"
-    },
-    {
-      "step": 1,
-      "label": "login page",
-      "flow": "Onboarding",
-      "image": "/screenshots/backpack-onboarding-1-login-page.png"
+      "image": "/screenshots/backpack-settings-4-terms.png"
     }
   ]
 }

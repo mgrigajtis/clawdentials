@@ -1,33 +1,69 @@
 {
   "slug": "orbiter",
   "url": "https://www.orbiter.finance",
-  "crawledAt": "2026-02-14T19:09:49.517Z",
-  "totalScreenshots": 4,
-  "totalStates": 4,
+  "crawledAt": "2026-02-22T01:53:43.159Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Bridge interface",
       "flow": "Swap",
-      "image": "/screenshots/orbiter-swap-1-landing-page.png"
+      "image": "/screenshots/orbiter-swap-1-bridge-interface.png"
     },
     {
       "step": 2,
-      "label": "Landing — More menu",
+      "label": "Testnet",
       "flow": "Swap",
-      "image": "/screenshots/orbiter-swap-2-landing-more-menu.png"
+      "image": "/screenshots/orbiter-swap-2-testnet.png"
     },
     {
       "step": 1,
-      "label": "this-page-does-not-exist-404-test page",
+      "label": "Market / Meme voting",
+      "flow": "Staking",
+      "image": "/screenshots/orbiter-staking-1-market-meme-voting.png"
+    },
+    {
+      "step": 1,
+      "label": "Quests",
       "flow": "Home",
-      "image": "/screenshots/orbiter-home-1-thispagedoesnotexist404test-page.png"
+      "image": "/screenshots/orbiter-home-1-quests.png"
     },
     {
       "step": 2,
-      "label": "referral page",
+      "label": "Explorer",
       "flow": "Home",
-      "image": "/screenshots/orbiter-home-2-referral-page.png"
+      "image": "/screenshots/orbiter-home-2-explorer.png"
+    },
+    {
+      "step": 3,
+      "label": "Airdrop",
+      "flow": "Home",
+      "image": "/screenshots/orbiter-home-3-airdrop.png"
+    },
+    {
+      "step": 4,
+      "label": "Collector",
+      "flow": "Home",
+      "image": "/screenshots/orbiter-home-4-collector.png"
+    },
+    {
+      "step": 5,
+      "label": "Referral",
+      "flow": "Home",
+      "image": "/screenshots/orbiter-home-5-referral.png"
+    },
+    {
+      "step": 1,
+      "label": "Terms of Use",
+      "flow": "Settings",
+      "image": "/screenshots/orbiter-settings-1-terms-of-use.png"
+    },
+    {
+      "step": 2,
+      "label": "Blog",
+      "flow": "Settings",
+      "image": "/screenshots/orbiter-settings-2-blog.png"
     }
   ]
 }

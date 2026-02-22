@@ -1,77 +1,54 @@
 {
   "slug": "moonpay",
-  "url": "https://www.moonpay.com",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-20T14:58:42.166Z",
-  "totalScreenshots": 1,
-  "pageCopy": {
-    "h1": "Your passport to crypto",
-    "metaDescription": "MoonPay offers a fast and simple way to buy and sell cryptocurrencies. Buy crypto with credit card, bank transfers, Apple Pay, PayPal and more.",
-    "ogTitle": "MoonPay: Buy and sell Bitcoin, Ethereum, and other cryptos",
-    "ogDescription": "MoonPay offers a fast and simple way to buy and sell cryptocurrencies. Buy crypto with credit card, bank transfers, Apple Pay, PayPal and more.",
-    "ctas": [
-      "Buy Crypto",
-      "Buy Crypto"
-    ],
-    "navItems": [
-      "Individuals",
-      "Business",
-      "Get Started"
-    ]
-  },
-  "techStack": [
+  "source": "browser-use",
+  "taskId": "1908c745-b30a-45cb-a91a-47da0e6f5ef4",
+  "crawledAt": "2026-02-22T02:27:18.853Z",
+  "totalScreenshots": 9,
+  "pages": [
     {
-      "category": "Framework",
-      "name": "Next.js",
-      "evidence": "__NEXT_DATA__ or #__next"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/moonpay-raw-001.png"
     },
     {
-      "category": "CSS",
-      "name": "Tailwind CSS",
-      "evidence": "Responsive utility classes"
+      "step": 2,
+      "label": "Buy Crypto",
+      "file": "/screenshots/moonpay-raw-002.png"
     },
     {
-      "category": "Analytics",
-      "name": "Segment",
-      "evidence": "analytics.js or segment script"
+      "step": 3,
+      "label": "Sell Crypto",
+      "file": "/screenshots/moonpay-raw-003.png"
     },
     {
-      "category": "Analytics",
-      "name": "Google Analytics",
-      "evidence": "ga/gtag"
+      "step": 4,
+      "label": "Swap",
+      "file": "/screenshots/moonpay-raw-004.png"
     },
     {
-      "category": "Privacy",
-      "name": "OneTrust",
-      "evidence": "OneTrust banner"
-    }
-  ],
-  "performance": {
-    "loadTime": 662,
-    "domContentLoaded": 260,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 110,
-    "transferSize": 176509,
-    "breakdown": {
-      "js": 0,
-      "css": 0,
-      "images": 0,
-      "fonts": 0,
-      "other": 176509
-    }
-  },
-  "screens": [
+      "step": 5,
+      "label": "Business",
+      "file": "/screenshots/moonpay-raw-005.png"
+    },
     {
-      "index": 1,
-      "filename": "moonpay-raw-001.png",
-      "url": "https://www.moonpay.com/",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 6,
+      "label": "About",
+      "file": "/screenshots/moonpay-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "Blog",
+      "file": "/screenshots/moonpay-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "Careers",
+      "file": "/screenshots/moonpay-raw-008.png"
+    },
+    {
+      "step": 9,
+      "label": "Commerce",
+      "file": "/screenshots/moonpay-raw-009.png"
     }
   ]
 }

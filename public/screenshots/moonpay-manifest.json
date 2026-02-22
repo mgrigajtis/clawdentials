@@ -1,15 +1,63 @@
 {
   "slug": "moonpay",
-  "url": "https://www.moonpay.com",
-  "crawledAt": "2026-02-20T14:58:42.166Z",
-  "totalScreenshots": 1,
-  "totalStates": 1,
+  "url": "",
+  "crawledAt": "2026-02-22T02:27:18.853Z",
+  "totalScreenshots": 9,
+  "totalStates": 9,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/moonpay-home-1-landing-page.png"
+      "image": "/screenshots/moonpay-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "Buy Crypto",
+      "flow": "Home",
+      "image": "/screenshots/moonpay-home-2-buy-crypto.png"
+    },
+    {
+      "step": 3,
+      "label": "Sell Crypto",
+      "flow": "Home",
+      "image": "/screenshots/moonpay-home-3-sell-crypto.png"
+    },
+    {
+      "step": 4,
+      "label": "Business",
+      "flow": "Home",
+      "image": "/screenshots/moonpay-home-4-business.png"
+    },
+    {
+      "step": 5,
+      "label": "Careers",
+      "flow": "Home",
+      "image": "/screenshots/moonpay-home-5-careers.png"
+    },
+    {
+      "step": 6,
+      "label": "Commerce",
+      "flow": "Home",
+      "image": "/screenshots/moonpay-home-6-commerce.png"
+    },
+    {
+      "step": 1,
+      "label": "Swap",
+      "flow": "Swap",
+      "image": "/screenshots/moonpay-swap-1-swap.png"
+    },
+    {
+      "step": 1,
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/moonpay-settings-1-about.png"
+    },
+    {
+      "step": 2,
+      "label": "Blog",
+      "flow": "Settings",
+      "image": "/screenshots/moonpay-settings-2-blog.png"
     }
   ]
 }

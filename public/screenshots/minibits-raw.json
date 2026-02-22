@@ -6,7 +6,7 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-14T11:36:12.779Z",
+  "crawledAt": "2026-02-22T01:29:21.603Z",
   "totalScreenshots": 3,
   "pageCopy": {
     "h1": "Minibits",
@@ -26,8 +26,8 @@
   },
   "techStack": [],
   "performance": {
-    "loadTime": 878,
-    "domContentLoaded": 762,
+    "loadTime": 2206,
+    "domContentLoaded": 1785,
     "lcp": null,
     "cls": null,
     "resourceCount": 6,

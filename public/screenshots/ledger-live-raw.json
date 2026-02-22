@@ -1,151 +1,59 @@
 {
   "slug": "ledger-live",
-  "url": "https://www.ledger.com",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-20T12:38:38.098Z",
-  "totalScreenshots": 1,
-  "pageCopy": {
-    "h1": "LEDGER CRYPTO WALLETS",
-    "metaDescription": "Secure your crypto assets such as Bitcoin, Ethereum, XRP, Monero, and more. Give yourself peace of mind by knowing that your cryptocurrencies are safe",
-    "ogTitle": "Ledger Crypto Wallet - Security for DeFi & Web3",
-    "ogDescription": "Secure your crypto assets such as Bitcoin, Ethereum, XRP, Monero, and more. Give yourself peace of mind by knowing that your cryptocurrencies are safe",
-    "ctas": [
-      "Discover Ledger Nano Gen5",
-      "Discover Ledger Wallet",
-      "Discover Ledger signers",
-      "Compare Ledger signers",
-      "Compare Ledger signers",
-      "See all supported cryptos",
-      "See all supported cryptos",
-      "Crypto security solutions",
-      "crypto wallet",
-      "one is public and the other is private"
-    ],
-    "navItems": [
-      "Ledger Stax",
-      "Ledger Flex\n\nNEW COLORS",
-      "Ledger Nano Gen5\n\nNEW",
-      "Ledger Nano Classics\n\nNEW COLORS",
-      "Hardware Wallets",
-      "Bundles & Packs",
-      "Accessories",
-      "Recovery Solutions",
-      "Limited Editions",
-      "See all products",
-      "Compare Ledger signers",
-      "Card\n\nSpend crypto or use it as collateral",
-      "Bitcoin wallet",
-      "Ethereum wallet",
-      "Solana wallet",
-      "Buy crypto",
-      "Swap crypto",
-      "Stake crypto",
-      "All supported crypto",
-      "Ledger Quest\n\nTake web3 quests and get NFTs",
-      "Blog\n\nAll web3 and Ledger news",
-      "What happens if I lose my Ledger?",
-      "Not your keys, not your coins",
-      "What is a cold wallet?",
-      "What is a private key?",
-      "What is a Crypto Wallet?",
-      "For Developers",
-      "Support",
-      "EN",
-      "Français",
-      "Türkçe",
-      "Deutsch",
-      "Português",
-      "Español",
-      "Русский",
-      "简体中文",
-      "日本語",
-      "한국어",
-      "العربية",
-      "ภาษาไทย",
-      "Secure touchscreen signers",
-      "Hardware Wallet",
-      "Ledger Nano Gen5",
-      "Ledger Flex",
-      "Ledger Nano Classics",
-      "Compare our devices",
-      "Bundles",
-      "All products",
-      "Downloads",
-      "Cardano wallet",
-      "XRP wallet",
-      "Monero wallet",
-      "USDT wallet",
-      "See all assets",
-      "Crypto Wallet",
-      "Crypto Prices",
-      "Buying crypto",
-      "Staking crypto",
-      "Swapping crypto",
-      "Ledger Enterprise Solutions",
-      "Funding from Ledger Cathay Capital",
-      "The Developer Portal",
-      "Start using your Ledger device",
-      "Compatible wallets and services",
-      "How to buy Bitcoin",
-      "Bitcoin Hardware Wallet",
-      "Bounty program",
-      "Resellers",
-      "Ledger Press Kit",
-      "Affiliates",
-      "Status",
-      "Developers",
-      "Partners",
-      "Join us",
-      "All jobs",
-      "Our vision",
-      "Ledger Academy",
-      "The company",
-      "Blog",
-      "Legal Center",
-      "Sales Terms and Conditions",
-      "Privacy Policy",
-      "Cookie Policy",
-      "Disclaimers"
-    ]
-  },
-  "techStack": [
+  "source": "browser-use",
+  "taskId": "e1446ce2-5c53-4e8d-8474-afa4e0fc2dd4",
+  "crawledAt": "2026-02-22T02:27:13.025Z",
+  "totalScreenshots": 10,
+  "pages": [
     {
-      "category": "Analytics",
-      "name": "Google Analytics",
-      "evidence": "ga/gtag"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/ledger-live-raw-001.png"
     },
     {
-      "category": "Privacy",
-      "name": "OneTrust",
-      "evidence": "OneTrust banner"
-    }
-  ],
-  "performance": {
-    "loadTime": 299,
-    "domContentLoaded": 283,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 203,
-    "transferSize": 273912,
-    "breakdown": {
-      "js": 270228,
-      "css": 1500,
-      "images": 1584,
-      "fonts": 0,
-      "other": 600
-    }
-  },
-  "screens": [
+      "step": 2,
+      "label": "Ledger Stax",
+      "file": "/screenshots/ledger-live-raw-002.png"
+    },
     {
-      "index": 1,
-      "filename": "ledger-live-raw-001.png",
-      "url": "https://www.ledger.com/",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 3,
+      "label": "Ledger Flex",
+      "file": "/screenshots/ledger-live-raw-003.png"
+    },
+    {
+      "step": 4,
+      "label": "Ledger Nano",
+      "file": "/screenshots/ledger-live-raw-004.png"
+    },
+    {
+      "step": 5,
+      "label": "Ledger Wallet",
+      "file": "/screenshots/ledger-live-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "Academy",
+      "file": "/screenshots/ledger-live-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "Blog",
+      "file": "/screenshots/ledger-live-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "Enterprise",
+      "file": "/screenshots/ledger-live-raw-008.png"
+    },
+    {
+      "step": 9,
+      "label": "Support",
+      "file": "/screenshots/ledger-live-raw-009.png"
+    },
+    {
+      "step": 10,
+      "label": "About",
+      "file": "/screenshots/ledger-live-raw-010.png"
     }
   ]
 }

@@ -1,33 +1,69 @@
 {
   "slug": "trust-wallet",
-  "url": "https://trustwallet.com",
-  "crawledAt": "2026-02-20T11:59:51.553Z",
-  "totalScreenshots": 4,
-  "totalStates": 4,
+  "url": "",
+  "crawledAt": "2026-02-22T02:26:17.943Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/trust-wallet-home-1-landing-page.png"
+      "image": "/screenshots/trust-wallet-home-1-homepage.png"
     },
     {
       "step": 2,
-      "label": "this-page-does-not-exist-404-test page",
+      "label": "Staking",
       "flow": "Home",
-      "image": "/screenshots/trust-wallet-home-2-thispagedoesnotexist404test-page.png"
+      "image": "/screenshots/trust-wallet-home-2-staking.png"
+    },
+    {
+      "step": 3,
+      "label": "Security",
+      "flow": "Home",
+      "image": "/screenshots/trust-wallet-home-3-security.png"
+    },
+    {
+      "step": 4,
+      "label": "NFTs",
+      "flow": "Home",
+      "image": "/screenshots/trust-wallet-home-4-nfts.png"
+    },
+    {
+      "step": 5,
+      "label": "Download",
+      "flow": "Home",
+      "image": "/screenshots/trust-wallet-home-5-download.png"
+    },
+    {
+      "step": 6,
+      "label": "Homepage Full",
+      "flow": "Home",
+      "image": "/screenshots/trust-wallet-home-6-homepage-full.png"
+    },
+    {
+      "step": 7,
+      "label": "Features",
+      "flow": "Home",
+      "image": "/screenshots/trust-wallet-home-7-features.png"
+    },
+    {
+      "step": 8,
+      "label": "DeFi",
+      "flow": "Home",
+      "image": "/screenshots/trust-wallet-home-8-defi.png"
     },
     {
       "step": 1,
-      "label": "earn page",
-      "flow": "Staking",
-      "image": "/screenshots/trust-wallet-staking-1-earn-page.png"
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/trust-wallet-settings-1-about.png"
     },
     {
-      "step": 1,
-      "label": "swap page",
-      "flow": "Swap",
-      "image": "/screenshots/trust-wallet-swap-1-swap-page.png"
+      "step": 2,
+      "label": "Blog",
+      "flow": "Settings",
+      "image": "/screenshots/trust-wallet-settings-2-blog.png"
     }
   ]
 }

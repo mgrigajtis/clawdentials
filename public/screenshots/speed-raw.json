@@ -6,7 +6,7 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-20T16:12:01.825Z",
+  "crawledAt": "2026-02-22T01:31:10.916Z",
   "totalScreenshots": 1,
   "pageCopy": {
     "h1": null,
@@ -47,11 +47,11 @@
     }
   ],
   "performance": {
-    "loadTime": 1520,
-    "domContentLoaded": 1238,
+    "loadTime": 4155,
+    "domContentLoaded": 2403,
     "lcp": null,
     "cls": null,
-    "resourceCount": 60,
+    "resourceCount": 64,
     "transferSize": 1066,
     "breakdown": {
       "js": 0,

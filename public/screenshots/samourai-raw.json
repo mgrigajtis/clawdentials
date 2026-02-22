@@ -6,7 +6,7 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-20T11:42:05.422Z",
+  "crawledAt": "2026-02-22T01:31:10.758Z",
   "totalScreenshots": 1,
   "pageCopy": {
     "h1": "samouraiwallet.com",
@@ -29,8 +29,8 @@
   },
   "techStack": [],
   "performance": {
-    "loadTime": 1410,
-    "domContentLoaded": 485,
+    "loadTime": 1359,
+    "domContentLoaded": 474,
     "lcp": null,
     "cls": null,
     "resourceCount": 1,

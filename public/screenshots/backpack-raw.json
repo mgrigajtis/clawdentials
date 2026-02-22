@@ -1,94 +1,54 @@
 {
   "slug": "backpack",
-  "url": "https://backpack.app",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-14T03:04:47.675Z",
-  "totalScreenshots": 4,
-  "pageCopy": {
-    "h1": "The All-in-One\nCrypto App",
-    "metaDescription": "Backpack offers a robust, user-friendly platform for seamlessly trading, managing, and securing your cryptocurrency assets.",
-    "ogTitle": "Backpack: Crypto Exchange & Wallet | Solana, Ethereum & BTC",
-    "ogDescription": "Backpack offers a robust, user-friendly platform for seamlessly trading, managing, and securing your cryptocurrency assets.",
-    "ctas": [
-      "Exchange",
-      "News",
-      "Learn",
-      "Support",
-      "About",
-      "Exchange",
-      "News",
-      "Learn",
-      "Support",
-      "About"
-    ],
-    "navItems": [
-      "Exchange",
-      "News",
-      "Learn",
-      "Support",
-      "About",
-      "© Backpack 2026",
-      "Terms",
-      "Privacy",
-      "Careers",
-      "Media Kit",
-      "Download"
-    ]
-  },
-  "techStack": [
+  "source": "browser-use",
+  "taskId": "e7ef7c3f-4a4c-4198-96a3-4fb15208980f",
+  "crawledAt": "2026-02-22T02:26:30.076Z",
+  "totalScreenshots": 9,
+  "pages": [
     {
-      "category": "CSS",
-      "name": "Tailwind CSS",
-      "evidence": "Responsive utility classes"
-    }
-  ],
-  "performance": {
-    "loadTime": 819,
-    "domContentLoaded": 609,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 27,
-    "transferSize": 730271,
-    "breakdown": {
-      "js": 133349,
-      "css": 35322,
-      "images": 474529,
-      "fonts": 76304,
-      "other": 10767
-    }
-  },
-  "screens": [
-    {
-      "index": 1,
-      "filename": "backpack-raw-001.png",
-      "url": "https://backpack.app/",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/backpack-raw-001.png"
     },
     {
-      "index": 2,
-      "filename": "backpack-raw-002.png",
-      "url": "https://backpack.app/terms",
-      "action": "page",
-      "context": "Terms (/terms)"
+      "step": 2,
+      "label": "Exchange",
+      "file": "/screenshots/backpack-raw-002.png"
     },
     {
-      "index": 3,
-      "filename": "backpack-raw-003.png",
-      "url": "https://backpack.app/download",
-      "action": "page",
-      "context": "Download (/download)"
+      "step": 3,
+      "label": "News",
+      "file": "/screenshots/backpack-raw-003.png"
     },
     {
-      "index": 4,
-      "filename": "backpack-raw-004.png",
-      "url": "https://backpack.app/login",
-      "action": "common-path",
-      "context": "Path: /login"
+      "step": 4,
+      "label": "Learn",
+      "file": "/screenshots/backpack-raw-004.png"
+    },
+    {
+      "step": 5,
+      "label": "Support",
+      "file": "/screenshots/backpack-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "About",
+      "file": "/screenshots/backpack-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "Download",
+      "file": "/screenshots/backpack-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "Careers",
+      "file": "/screenshots/backpack-raw-008.png"
+    },
+    {
+      "step": 9,
+      "label": "Terms",
+      "file": "/screenshots/backpack-raw-009.png"
     }
   ]
 }

@@ -6,53 +6,79 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-14T17:14:19.898Z",
-  "totalScreenshots": 1,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "Hyperliquid is the blockchain to house all finance. For the first time, build projects, create value, and exchange assets on the same hyper-performant chain.",
-    "ogTitle": null,
-    "ogDescription": null,
-    "ctas": [
-      "Stats",
-      "Docs",
-      "Ecosystem",
-      "Terms of Service",
-      "Privacy Policy",
-      "Genesis Event Terms & Conditions",
-      "NFT Terms & License"
-    ],
-    "navItems": []
-  },
-  "techStack": [
-    {
-      "category": "CSS",
-      "name": "Chakra UI",
-      "evidence": "chakra- class prefix"
-    }
-  ],
-  "performance": {
-    "loadTime": 846,
-    "domContentLoaded": 846,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 56,
-    "transferSize": 42718599,
-    "breakdown": {
-      "js": 1029409,
-      "css": 536108,
-      "images": 1525858,
-      "fonts": 0,
-      "other": 39627224
-    }
-  },
+  "crawledAt": "2026-02-22T01:53:36.803Z",
+  "totalScreenshots": 10,
+  "source": "browser-use",
   "screens": [
     {
       "index": 1,
       "filename": "hyperliquid-raw-001.png",
       "url": "https://hyperfoundation.org/",
       "action": "landing",
-      "context": "Landing page"
+      "context": "Homepage"
+    },
+    {
+      "index": 2,
+      "filename": "hyperliquid-raw-002.png",
+      "url": "https://hyperscreener.asxn.xyz/home",
+      "action": "navigate",
+      "context": "Stats dashboard"
+    },
+    {
+      "index": 3,
+      "filename": "hyperliquid-raw-003.png",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs",
+      "action": "navigate",
+      "context": "Documentation"
+    },
+    {
+      "index": 4,
+      "filename": "hyperliquid-raw-004.png",
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/hyperevm",
+      "action": "navigate",
+      "context": "HyperEVM docs"
+    },
+    {
+      "index": 5,
+      "filename": "hyperliquid-raw-005.png",
+      "url": "https://app.hyperliquid.xyz/trade",
+      "action": "navigate",
+      "context": "Trade interface"
+    },
+    {
+      "index": 6,
+      "filename": "hyperliquid-raw-006.png",
+      "url": "https://app.hyperliquid.xyz/portfolio",
+      "action": "navigate",
+      "context": "Portfolio"
+    },
+    {
+      "index": 7,
+      "filename": "hyperliquid-raw-007.png",
+      "url": "https://app.hyperliquid.xyz/vaults",
+      "action": "navigate",
+      "context": "Vaults"
+    },
+    {
+      "index": 8,
+      "filename": "hyperliquid-raw-008.png",
+      "url": "https://app.hyperliquid.xyz/staking",
+      "action": "navigate",
+      "context": "Staking"
+    },
+    {
+      "index": 9,
+      "filename": "hyperliquid-raw-009.png",
+      "url": "https://app.hyperliquid.xyz/leaderboard",
+      "action": "navigate",
+      "context": "Leaderboard"
+    },
+    {
+      "index": 10,
+      "filename": "hyperliquid-raw-010.png",
+      "url": "https://app.hyperliquid.xyz/referrals",
+      "action": "navigate",
+      "context": "Referrals"
     }
   ]
 }

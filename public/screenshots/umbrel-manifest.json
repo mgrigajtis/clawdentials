@@ -1,39 +1,63 @@
 {
   "slug": "umbrel",
-  "url": "https://umbrel.com",
-  "crawledAt": "2026-02-14T03:24:45.334Z",
-  "totalScreenshots": 5,
-  "totalStates": 5,
+  "url": "",
+  "crawledAt": "2026-02-22T02:26:54.467Z",
+  "totalScreenshots": 9,
+  "totalStates": 9,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/umbrel-home-1-landing-page.png"
+      "image": "/screenshots/umbrel-home-1-homepage.png"
     },
     {
       "step": 2,
-      "label": "App Store",
+      "label": "Umbrel Pro",
       "flow": "Home",
-      "image": "/screenshots/umbrel-home-2-app-store.png"
+      "image": "/screenshots/umbrel-home-2-umbrel-pro.png"
     },
     {
       "step": 3,
-      "label": "this-page-does-not-exist-404-test page",
+      "label": "Umbrel Home",
       "flow": "Home",
-      "image": "/screenshots/umbrel-home-3-thispagedoesnotexist404test-page.png"
+      "image": "/screenshots/umbrel-home-3-umbrel-home.png"
+    },
+    {
+      "step": 4,
+      "label": "umbrelOS",
+      "flow": "Home",
+      "image": "/screenshots/umbrel-home-4-umbrelos.png"
+    },
+    {
+      "step": 5,
+      "label": "App Store",
+      "flow": "Home",
+      "image": "/screenshots/umbrel-home-5-app-store.png"
+    },
+    {
+      "step": 6,
+      "label": "Careers",
+      "flow": "Home",
+      "image": "/screenshots/umbrel-home-6-careers.png"
     },
     {
       "step": 1,
-      "label": "SupportGet help with installing and troubleshootin",
+      "label": "Support",
       "flow": "Settings",
-      "image": "/screenshots/umbrel-settings-1-supportget-help-with-installing-and-troubleshootin.png"
+      "image": "/screenshots/umbrel-settings-1-support.png"
     },
     {
       "step": 2,
+      "label": "Community",
+      "flow": "Settings",
+      "image": "/screenshots/umbrel-settings-2-community.png"
+    },
+    {
+      "step": 3,
       "label": "Legal",
       "flow": "Settings",
-      "image": "/screenshots/umbrel-settings-2-legal.png"
+      "image": "/screenshots/umbrel-settings-3-legal.png"
     }
   ]
 }

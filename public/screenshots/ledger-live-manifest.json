@@ -1,15 +1,69 @@
 {
   "slug": "ledger-live",
-  "url": "https://www.ledger.com",
-  "crawledAt": "2026-02-20T12:38:38.098Z",
-  "totalScreenshots": 1,
-  "totalStates": 1,
+  "url": "",
+  "crawledAt": "2026-02-22T02:27:13.025Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/ledger-live-home-1-landing-page.png"
+      "image": "/screenshots/ledger-live-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "Ledger Stax",
+      "flow": "Home",
+      "image": "/screenshots/ledger-live-home-2-ledger-stax.png"
+    },
+    {
+      "step": 3,
+      "label": "Ledger Flex",
+      "flow": "Home",
+      "image": "/screenshots/ledger-live-home-3-ledger-flex.png"
+    },
+    {
+      "step": 4,
+      "label": "Ledger Nano",
+      "flow": "Home",
+      "image": "/screenshots/ledger-live-home-4-ledger-nano.png"
+    },
+    {
+      "step": 5,
+      "label": "Ledger Wallet",
+      "flow": "Home",
+      "image": "/screenshots/ledger-live-home-5-ledger-wallet.png"
+    },
+    {
+      "step": 6,
+      "label": "Academy",
+      "flow": "Home",
+      "image": "/screenshots/ledger-live-home-6-academy.png"
+    },
+    {
+      "step": 7,
+      "label": "Enterprise",
+      "flow": "Home",
+      "image": "/screenshots/ledger-live-home-7-enterprise.png"
+    },
+    {
+      "step": 1,
+      "label": "Blog",
+      "flow": "Settings",
+      "image": "/screenshots/ledger-live-settings-1-blog.png"
+    },
+    {
+      "step": 2,
+      "label": "Support",
+      "flow": "Settings",
+      "image": "/screenshots/ledger-live-settings-2-support.png"
+    },
+    {
+      "step": 3,
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/ledger-live-settings-3-about.png"
     }
   ]
 }

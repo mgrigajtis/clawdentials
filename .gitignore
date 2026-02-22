@@ -65,3 +65,12 @@ scripts/wallets/
 .claude/
 .codex/
 .cursor/
+
+# Build cache
+tsconfig.tsbuildinfo
+
+# OCR model data (install via apt/brew, not repo)
+eng.traineddata
+
+# Stray checkout artifacts
+mdk-checkout/

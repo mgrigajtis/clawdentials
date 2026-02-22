@@ -1,0 +1,69 @@
+{
+  "slug": "bybit",
+  "url": "https://www.bybit.com",
+  "crawledAt": "2026-02-22T01:53:49.863Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
+  "screens": [
+    {
+      "step": 1,
+      "label": "Homepage",
+      "flow": "Home",
+      "image": "/screenshots/bybit-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "About",
+      "flow": "Home",
+      "image": "/screenshots/bybit-home-2-about.png"
+    },
+    {
+      "step": 3,
+      "label": "Blog / Insights",
+      "flow": "Home",
+      "image": "/screenshots/bybit-home-3-blog-insights.png"
+    },
+    {
+      "step": 1,
+      "label": "Markets",
+      "flow": "Swap",
+      "image": "/screenshots/bybit-swap-1-markets.png"
+    },
+    {
+      "step": 2,
+      "label": "Copy Trading",
+      "flow": "Swap",
+      "image": "/screenshots/bybit-swap-2-copy-trading.png"
+    },
+    {
+      "step": 1,
+      "label": "Trading Fees",
+      "flow": "Settings",
+      "image": "/screenshots/bybit-settings-1-trading-fees.png"
+    },
+    {
+      "step": 2,
+      "label": "Careers",
+      "flow": "Settings",
+      "image": "/screenshots/bybit-settings-2-careers.png"
+    },
+    {
+      "step": 3,
+      "label": "Help Center",
+      "flow": "Settings",
+      "image": "/screenshots/bybit-settings-3-help-center.png"
+    },
+    {
+      "step": 1,
+      "label": "Learn",
+      "flow": "Staking",
+      "image": "/screenshots/bybit-staking-1-learn.png"
+    },
+    {
+      "step": 1,
+      "label": "Announcements",
+      "flow": "Send",
+      "image": "/screenshots/bybit-send-1-announcements.png"
+    }
+  ]
+}

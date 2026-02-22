@@ -1,0 +1,12 @@
+name = "darkscreen-telegram-webhook"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "MESSAGES"
+id = "3fc575ab100a48088e08f1bdea4c155a"
+
+[vars]
+# Secrets (set via wrangler secret put):
+# TELEGRAM_BOT_TOKEN
+# TELEGRAM_CHAT_ID

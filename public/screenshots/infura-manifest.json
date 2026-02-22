@@ -1,15 +1,63 @@
 {
   "slug": "infura",
   "url": "https://www.infura.io",
-  "crawledAt": "2026-02-20T15:50:42.849Z",
-  "totalScreenshots": 1,
-  "totalStates": 1,
+  "crawledAt": "2026-02-22T01:54:01.373Z",
+  "totalScreenshots": 9,
+  "totalStates": 9,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/infura-home-1-landing-page.png"
+      "image": "/screenshots/infura-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "Pricing",
+      "flow": "Home",
+      "image": "/screenshots/infura-home-2-pricing.png"
+    },
+    {
+      "step": 3,
+      "label": "Networks",
+      "flow": "Home",
+      "image": "/screenshots/infura-home-3-networks.png"
+    },
+    {
+      "step": 4,
+      "label": "Use Cases",
+      "flow": "Home",
+      "image": "/screenshots/infura-home-4-use-cases.png"
+    },
+    {
+      "step": 5,
+      "label": "Developer Stories",
+      "flow": "Home",
+      "image": "/screenshots/infura-home-5-developer-stories.png"
+    },
+    {
+      "step": 6,
+      "label": "Documentation",
+      "flow": "Home",
+      "image": "/screenshots/infura-home-6-documentation.png"
+    },
+    {
+      "step": 7,
+      "label": "Blog / News",
+      "flow": "Home",
+      "image": "/screenshots/infura-home-7-blog-news.png"
+    },
+    {
+      "step": 1,
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/infura-settings-1-about.png"
+    },
+    {
+      "step": 2,
+      "label": "FAQ",
+      "flow": "Settings",
+      "image": "/screenshots/infura-settings-2-faq.png"
     }
   ]
 }

@@ -6,7 +6,7 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-20T11:41:35.541Z",
+  "crawledAt": "2026-02-22T01:28:11.349Z",
   "totalScreenshots": 1,
   "pageCopy": {
     "h1": "Page not found",
@@ -18,8 +18,8 @@
   },
   "techStack": [],
   "performance": {
-    "loadTime": 711,
-    "domContentLoaded": 602,
+    "loadTime": 738,
+    "domContentLoaded": 413,
     "lcp": null,
     "cls": null,
     "resourceCount": 1,

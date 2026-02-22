@@ -1,15 +1,69 @@
 {
   "slug": "eigenlayer",
   "url": "https://www.eigenlayer.xyz",
-  "crawledAt": "2026-02-14T18:25:20.813Z",
-  "totalScreenshots": 1,
-  "totalStates": 1,
+  "crawledAt": "2026-02-22T01:53:30.768Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/eigenlayer-home-1-landing-page.png"
+      "image": "/screenshots/eigenlayer-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "App dashboard",
+      "flow": "Home",
+      "image": "/screenshots/eigenlayer-home-2-app-dashboard.png"
+    },
+    {
+      "step": 3,
+      "label": "Blog",
+      "flow": "Home",
+      "image": "/screenshots/eigenlayer-home-3-blog.png"
+    },
+    {
+      "step": 4,
+      "label": "Documentation",
+      "flow": "Home",
+      "image": "/screenshots/eigenlayer-home-4-documentation.png"
+    },
+    {
+      "step": 5,
+      "label": "Careers",
+      "flow": "Home",
+      "image": "/screenshots/eigenlayer-home-5-careers.png"
+    },
+    {
+      "step": 6,
+      "label": "Foundation",
+      "flow": "Home",
+      "image": "/screenshots/eigenlayer-home-6-foundation.png"
+    },
+    {
+      "step": 7,
+      "label": "Developers",
+      "flow": "Home",
+      "image": "/screenshots/eigenlayer-home-7-developers.png"
+    },
+    {
+      "step": 1,
+      "label": "Privacy Policy",
+      "flow": "Settings",
+      "image": "/screenshots/eigenlayer-settings-1-privacy-policy.png"
+    },
+    {
+      "step": 2,
+      "label": "Terms of Service",
+      "flow": "Settings",
+      "image": "/screenshots/eigenlayer-settings-2-terms-of-service.png"
+    },
+    {
+      "step": 3,
+      "label": "Acceptable Use Policy",
+      "flow": "Settings",
+      "image": "/screenshots/eigenlayer-settings-3-acceptable-use-policy.png"
     }
   ]
 }

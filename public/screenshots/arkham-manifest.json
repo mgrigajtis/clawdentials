@@ -1,27 +1,51 @@
 {
   "slug": "arkham",
-  "url": "https://platform.arkhamintelligence.com",
-  "crawledAt": "2026-02-14T03:05:33.401Z",
-  "totalScreenshots": 3,
-  "totalStates": 3,
+  "url": "",
+  "crawledAt": "2026-02-22T02:27:24.765Z",
+  "totalScreenshots": 7,
+  "totalStates": 7,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/arkham-home-1-landing-page.png"
-    },
-    {
-      "step": 1,
-      "label": "settings page",
-      "flow": "Settings",
-      "image": "/screenshots/arkham-settings-1-settings-page.png"
+      "image": "/screenshots/arkham-home-1-homepage.png"
     },
     {
       "step": 2,
-      "label": "help page",
-      "flow": "Settings",
-      "image": "/screenshots/arkham-settings-2-help-page.png"
+      "label": "Explorer",
+      "flow": "Home",
+      "image": "/screenshots/arkham-home-2-explorer.png"
+    },
+    {
+      "step": 3,
+      "label": "API",
+      "flow": "Home",
+      "image": "/screenshots/arkham-home-3-api.png"
+    },
+    {
+      "step": 4,
+      "label": "Codex",
+      "flow": "Home",
+      "image": "/screenshots/arkham-home-4-codex.png"
+    },
+    {
+      "step": 1,
+      "label": "Market Data",
+      "flow": "Swap",
+      "image": "/screenshots/arkham-swap-1-market-data.png"
+    },
+    {
+      "step": 2,
+      "label": "Exchange",
+      "flow": "Swap",
+      "image": "/screenshots/arkham-swap-2-exchange.png"
+    },
+    {
+      "step": 3,
+      "label": "Swap",
+      "flow": "Swap",
+      "image": "/screenshots/arkham-swap-3-swap.png"
     }
   ]
 }

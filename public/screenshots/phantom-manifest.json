@@ -1,15 +1,63 @@
 {
   "slug": "phantom",
-  "url": "https://phantom.app",
-  "crawledAt": "2026-02-14T03:08:41.377Z",
-  "totalScreenshots": 1,
-  "totalStates": 1,
+  "url": "",
+  "crawledAt": "2026-02-22T02:26:24.024Z",
+  "totalScreenshots": 9,
+  "totalStates": 9,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/phantom-home-1-landing-page.png"
+      "image": "/screenshots/phantom-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "Download",
+      "flow": "Home",
+      "image": "/screenshots/phantom-home-2-download.png"
+    },
+    {
+      "step": 3,
+      "label": "Get Started",
+      "flow": "Home",
+      "image": "/screenshots/phantom-home-3-get-started.png"
+    },
+    {
+      "step": 4,
+      "label": "Security",
+      "flow": "Home",
+      "image": "/screenshots/phantom-home-4-security.png"
+    },
+    {
+      "step": 5,
+      "label": "Developers",
+      "flow": "Home",
+      "image": "/screenshots/phantom-home-5-developers.png"
+    },
+    {
+      "step": 1,
+      "label": "Blog",
+      "flow": "Settings",
+      "image": "/screenshots/phantom-settings-1-blog.png"
+    },
+    {
+      "step": 2,
+      "label": "Support",
+      "flow": "Settings",
+      "image": "/screenshots/phantom-settings-2-support.png"
+    },
+    {
+      "step": 3,
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/phantom-settings-3-about.png"
+    },
+    {
+      "step": 4,
+      "label": "Privacy",
+      "flow": "Settings",
+      "image": "/screenshots/phantom-settings-4-privacy.png"
     }
   ]
 }

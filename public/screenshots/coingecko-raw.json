@@ -1,155 +1,49 @@
 {
   "slug": "coingecko",
-  "url": "https://www.coingecko.com",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-20T13:53:50.443Z",
-  "totalScreenshots": 2,
-  "pageCopy": {
-    "h1": "Cryptocurrency Prices by Market Cap",
-    "metaDescription": "View top cryptocurrency prices live, crypto charts, market cap, and trading volume. Discover today’s new and trending coins, top crypto gainers and losers in the market.",
-    "ogTitle": "Cryptocurrency Prices, Charts, and Crypto Market Cap | CoinGecko",
-    "ogDescription": "View top cryptocurrency prices live, crypto charts, market cap, and trading volume. Discover today’s new and trending coins, top crypto gainers and losers in the market.",
-    "ctas": [
-      "Open App",
-      "Polkadot Ecosystem",
-      "XRP Ledger Ecosystem",
-      "View more",
-      "Aztec\n$0.0316866.3%",
-      "Pudgy Penguins\n$0.0069135.2%",
-      "Optimism\n$0.12787.6%",
-      "View more",
-      "Aztec\n$0.0316866.3%",
-      "Bio Protocol\n$0.032143.0%"
-    ],
-    "navItems": [
-      "Track Multiple Wallets",
-      "18,871",
-      "1,468",
-      "$2.411T",
-      "$115.604B",
-      "BTC 56.4%",
-      "ETH 9.88%",
-      "Premium",
-      "Use App",
-      "By Market Cap",
-      "Categories",
-      "Chains",
-      "Crypto Treasuries",
-      "Rehypothecated",
-      "Highlights",
-      "New Cryptocurrencies",
-      "Gainers & Losers",
-      "All Coins",
-      "Compare Coins and NFT",
-      "Converter",
-      "Global Chart",
-      "Crypto Exchanges",
-      "Decentralized Exchanges",
-      "Derivatives",
-      "Perp DEXs",
-      "Prediction Markets \n\n    \n  \n      Alpha",
-      "NFT Floor Price",
-      "NFT Related Coins",
-      "NFT Watchlist",
-      "NFT Global Chart",
-      "Learn Crypto",
-      "Research Insights",
-      "News",
-      "Reports",
-      "Learn & Earn",
-      "Videos",
-      "Newsletter",
-      "Glossary",
-      "Crypto Portfolio",
-      "CoinGecko App",
-      "CoinGecko Premium",
-      "Advertising",
-      "Crypto Widget",
-      "GeckoTerminal",
-      "Crypto API",
-      "On-chain DEX API",
-      "NFT API",
-      "Pricing",
-      "Documentation",
-      "Learn API",
-      "API for Business",
-      "Case Studies",
-      "Candy",
-      "Portfolio",
-      "View more",
-      "My Coins",
-      "My NFTs",
-      "Trending",
-      "NFTs",
-      "Cryptocurrencies",
-      "Exchanges",
-      "Articles",
-      "All",
-      "🔥 Music",
-      "🔥 Pump Science Ecosystem",
-      "🔥 Kommunitas Launchpad",
-      "175",
-      "Top Gainers",
-      "Top 50",
-      "Recently Added",
-      "Recently Searched",
-      "Top Losers",
-      "Home",
-      "Search",
-      "Sign Up",
-      "Menu"
-    ]
-  },
-  "techStack": [
+  "source": "browser-use",
+  "taskId": "97206cce-85fa-4417-88db-5223c677223d",
+  "crawledAt": "2026-02-22T02:27:04.621Z",
+  "totalScreenshots": 8,
+  "pages": [
     {
-      "category": "CSS",
-      "name": "Tailwind CSS",
-      "evidence": "Responsive utility classes"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/coingecko-raw-001.png"
     },
     {
-      "category": "Error Tracking",
-      "name": "Sentry",
-      "evidence": "__SENTRY__ or sentry script"
+      "step": 2,
+      "label": "Bitcoin",
+      "file": "/screenshots/coingecko-raw-002.png"
     },
     {
-      "category": "Privacy",
-      "name": "OneTrust",
-      "evidence": "OneTrust banner"
-    }
-  ],
-  "performance": {
-    "loadTime": 659,
-    "domContentLoaded": 440,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 250,
-    "transferSize": 168118,
-    "breakdown": {
-      "js": 0,
-      "css": 0,
-      "images": 165008,
-      "fonts": 0,
-      "other": 3110
-    }
-  },
-  "screens": [
-    {
-      "index": 1,
-      "filename": "coingecko-raw-001.png",
-      "url": "https://www.coingecko.com/",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 3,
+      "label": "Exchanges",
+      "file": "/screenshots/coingecko-raw-003.png"
     },
     {
-      "index": 2,
-      "filename": "coingecko-raw-002.png",
-      "url": "https://www.coingecko.com/en/api/enterprise",
-      "action": "page",
-      "context": "API for Business (/en/api/enterprise)"
+      "step": 4,
+      "label": "Categories",
+      "file": "/screenshots/coingecko-raw-004.png"
+    },
+    {
+      "step": 5,
+      "label": "NFTs",
+      "file": "/screenshots/coingecko-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "News",
+      "file": "/screenshots/coingecko-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "API",
+      "file": "/screenshots/coingecko-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "About",
+      "file": "/screenshots/coingecko-raw-008.png"
     }
   ]
 }

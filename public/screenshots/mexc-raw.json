@@ -6,55 +6,79 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-14T15:07:24.544Z",
-  "totalScreenshots": 1,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "MEXC is your easiest way to crypto. Explore the world's leading cryptocurrency exchange for buying, trading, and earning crypto. Trade Bitcoin BTC, Ethereum ETH, and more than 3,000 altcoins.",
-    "ogTitle": "MEXC Exchange: Your Easiest Way to Crypto - Trade Bitcoin, Ethereum & Most Trending Tokens",
-    "ogDescription": "MEXC is your easiest way to crypto. Explore the world's leading cryptocurrency exchange for buying, trading, and earning crypto. Trade Bitcoin BTC, Ethereum ETH, and more than 3,000 altcoins.",
-    "ctas": [],
-    "navItems": []
-  },
-  "techStack": [
-    {
-      "category": "Framework",
-      "name": "Next.js",
-      "evidence": "__NEXT_DATA__ or #__next"
-    },
-    {
-      "category": "Analytics",
-      "name": "Google Analytics",
-      "evidence": "ga/gtag"
-    },
-    {
-      "category": "Error Tracking",
-      "name": "Sentry",
-      "evidence": "__SENTRY__ or sentry script"
-    }
-  ],
-  "performance": {
-    "loadTime": 5925,
-    "domContentLoaded": 807,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 570,
-    "transferSize": 2140992,
-    "breakdown": {
-      "js": 300,
-      "css": 0,
-      "images": 0,
-      "fonts": 0,
-      "other": 2140692
-    }
-  },
+  "crawledAt": "2026-02-22T01:55:03.878Z",
+  "totalScreenshots": 10,
+  "source": "browser-use",
   "screens": [
     {
       "index": 1,
       "filename": "mexc-raw-001.png",
       "url": "https://www.mexc.com/",
       "action": "landing",
-      "context": "Landing page"
+      "context": "Homepage"
+    },
+    {
+      "index": 2,
+      "filename": "mexc-raw-002.png",
+      "url": "https://www.mexc.com/markets/spot",
+      "action": "navigate",
+      "context": "Markets"
+    },
+    {
+      "index": 3,
+      "filename": "mexc-raw-003.png",
+      "url": "https://www.mexc.com/fee",
+      "action": "navigate",
+      "context": "Fees"
+    },
+    {
+      "index": 4,
+      "filename": "mexc-raw-004.png",
+      "url": "https://www.mexc.com/about",
+      "action": "navigate",
+      "context": "About"
+    },
+    {
+      "index": 5,
+      "filename": "mexc-raw-005.png",
+      "url": "https://www.mexc.com/learn",
+      "action": "navigate",
+      "context": "Learn"
+    },
+    {
+      "index": 6,
+      "filename": "mexc-raw-006.png",
+      "url": "https://blog.mexc.com/",
+      "action": "navigate",
+      "context": "Blog"
+    },
+    {
+      "index": 7,
+      "filename": "mexc-raw-007.png",
+      "url": "https://www.mexc.com/support",
+      "action": "navigate",
+      "context": "Support"
+    },
+    {
+      "index": 8,
+      "filename": "mexc-raw-008.png",
+      "url": "https://www.mexc.com/institutional-services",
+      "action": "navigate",
+      "context": "Institutional Services"
+    },
+    {
+      "index": 9,
+      "filename": "mexc-raw-009.png",
+      "url": "https://www.mexc.com/announcements",
+      "action": "navigate",
+      "context": "Announcements"
+    },
+    {
+      "index": 10,
+      "filename": "mexc-raw-010.png",
+      "url": "https://www.mexc.com/download",
+      "action": "navigate",
+      "context": "Download"
     }
   ]
 }

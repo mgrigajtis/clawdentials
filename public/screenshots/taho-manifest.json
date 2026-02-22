@@ -1,39 +1,63 @@
 {
   "slug": "taho",
-  "url": "https://taho.xyz",
-  "crawledAt": "2026-02-14T03:10:38.941Z",
-  "totalScreenshots": 5,
-  "totalStates": 5,
+  "url": "",
+  "crawledAt": "2026-02-22T02:26:48.662Z",
+  "totalScreenshots": 9,
+  "totalStates": 9,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/taho-home-1-landing-page.png"
+      "image": "/screenshots/taho-home-1-homepage.png"
     },
     {
       "step": 2,
-      "label": "Blog ↗︎︎︎",
+      "label": "Security",
       "flow": "Home",
-      "image": "/screenshots/taho-home-2-blog-.png"
+      "image": "/screenshots/taho-home-2-security.png"
     },
     {
       "step": 3,
-      "label": "Security",
+      "label": "Download",
       "flow": "Home",
-      "image": "/screenshots/taho-home-3-security.png"
+      "image": "/screenshots/taho-home-3-download.png"
+    },
+    {
+      "step": 4,
+      "label": "Thesis",
+      "flow": "Home",
+      "image": "/screenshots/taho-home-4-thesis.png"
+    },
+    {
+      "step": 1,
+      "label": "Blog",
+      "flow": "Settings",
+      "image": "/screenshots/taho-settings-1-blog.png"
+    },
+    {
+      "step": 2,
+      "label": "Blog Detail",
+      "flow": "Settings",
+      "image": "/screenshots/taho-settings-2-blog-detail.png"
+    },
+    {
+      "step": 3,
+      "label": "FAQ",
+      "flow": "Settings",
+      "image": "/screenshots/taho-settings-3-faq.png"
+    },
+    {
+      "step": 4,
+      "label": "Privacy",
+      "flow": "Settings",
+      "image": "/screenshots/taho-settings-4-privacy.png"
     },
     {
       "step": 1,
       "label": "DAO",
       "flow": "Staking",
       "image": "/screenshots/taho-staking-1-dao.png"
-    },
-    {
-      "step": 1,
-      "label": "settings page",
-      "flow": "Settings",
-      "image": "/screenshots/taho-settings-1-settings-page.png"
     }
   ]
 }

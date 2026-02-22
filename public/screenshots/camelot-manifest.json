@@ -1,27 +1,69 @@
 {
   "slug": "camelot",
   "url": "https://camelot.exchange",
-  "crawledAt": "2026-02-14T19:17:01.742Z",
-  "totalScreenshots": 3,
-  "totalStates": 3,
+  "crawledAt": "2026-02-22T01:54:57.707Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/camelot-home-1-landing-page.png"
+      "image": "/screenshots/camelot-home-1-homepage.png"
     },
     {
       "step": 2,
-      "label": "Launch App",
+      "label": "Documentation",
       "flow": "Home",
-      "image": "/screenshots/camelot-home-2-launch-app.png"
+      "image": "/screenshots/camelot-home-2-documentation.png"
     },
     {
       "step": 3,
-      "label": "home",
+      "label": "Blog",
       "flow": "Home",
-      "image": "/screenshots/camelot-home-3-home.png"
+      "image": "/screenshots/camelot-home-3-blog.png"
+    },
+    {
+      "step": 4,
+      "label": "Roundtable",
+      "flow": "Home",
+      "image": "/screenshots/camelot-home-4-roundtable.png"
+    },
+    {
+      "step": 5,
+      "label": "Audit Report",
+      "flow": "Home",
+      "image": "/screenshots/camelot-home-5-audit-report.png"
+    },
+    {
+      "step": 6,
+      "label": "Analytics",
+      "flow": "Home",
+      "image": "/screenshots/camelot-home-6-analytics.png"
+    },
+    {
+      "step": 1,
+      "label": "Liquidity Pools",
+      "flow": "Staking",
+      "image": "/screenshots/camelot-staking-1-liquidity-pools.png"
+    },
+    {
+      "step": 1,
+      "label": "Swap",
+      "flow": "Swap",
+      "image": "/screenshots/camelot-swap-1-swap.png"
+    },
+    {
+      "step": 1,
+      "label": "FAQ",
+      "flow": "Settings",
+      "image": "/screenshots/camelot-settings-1-faq.png"
+    },
+    {
+      "step": 1,
+      "label": "Bridge",
+      "flow": "Send",
+      "image": "/screenshots/camelot-send-1-bridge.png"
     }
   ]
 }

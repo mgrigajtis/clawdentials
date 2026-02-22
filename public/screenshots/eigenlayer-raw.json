@@ -6,57 +6,79 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-14T18:25:20.813Z",
-  "totalScreenshots": 1,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "Build verifiable apps and agents with EigenCloud. Deterministic AI inference, verifiable compute containers, and high-throughput data availability powered by EigenLayer.",
-    "ogTitle": "EigenCloud - Verifiable AI & Compute Infrastructure",
-    "ogDescription": "Build verifiable apps and agents with EigenCloud. Deterministic AI inference, verifiable compute containers, and high-throughput data availability powered by EigenLayer.",
-    "ctas": [
-      "TRY EIGENAI",
-      "TRY EIGENCOMPUTE",
-      "EXPLORE EIGENDA",
-      "RESTAKE NOW"
-    ],
-    "navItems": [
-      "Explore",
-      "Build",
-      "Blog",
-      "Economy",
-      "Forum",
-      "Contact"
-    ]
-  },
-  "techStack": [
-    {
-      "category": "Analytics",
-      "name": "Google Analytics",
-      "evidence": "ga/gtag"
-    }
-  ],
-  "performance": {
-    "loadTime": 153,
-    "domContentLoaded": 99,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 25,
-    "transferSize": 0,
-    "breakdown": {
-      "js": 0,
-      "css": 0,
-      "images": 0,
-      "fonts": 0,
-      "other": 0
-    }
-  },
+  "crawledAt": "2026-02-22T01:53:30.768Z",
+  "totalScreenshots": 10,
+  "source": "browser-use",
   "screens": [
     {
       "index": 1,
       "filename": "eigenlayer-raw-001.png",
       "url": "https://www.eigencloud.xyz/",
       "action": "landing",
-      "context": "Landing page"
+      "context": "Homepage"
+    },
+    {
+      "index": 2,
+      "filename": "eigenlayer-raw-002.png",
+      "url": "https://app.eigenlayer.xyz/",
+      "action": "navigate",
+      "context": "App dashboard"
+    },
+    {
+      "index": 3,
+      "filename": "eigenlayer-raw-003.png",
+      "url": "https://blog.eigencloud.xyz/",
+      "action": "navigate",
+      "context": "Blog"
+    },
+    {
+      "index": 4,
+      "filename": "eigenlayer-raw-004.png",
+      "url": "https://docs.eigencloud.xyz/",
+      "action": "navigate",
+      "context": "Documentation"
+    },
+    {
+      "index": 5,
+      "filename": "eigenlayer-raw-005.png",
+      "url": "https://jobs.ashbyhq.com/eigen-labs",
+      "action": "navigate",
+      "context": "Careers"
+    },
+    {
+      "index": 6,
+      "filename": "eigenlayer-raw-006.png",
+      "url": "https://eigenfoundation.org/",
+      "action": "navigate",
+      "context": "Foundation"
+    },
+    {
+      "index": 7,
+      "filename": "eigenlayer-raw-007.png",
+      "url": "https://developers.eigencloud.xyz/",
+      "action": "navigate",
+      "context": "Developers"
+    },
+    {
+      "index": 8,
+      "filename": "eigenlayer-raw-008.png",
+      "url": "https://docs.eigencloud.xyz/eigencloud/legal/privacy-policy",
+      "action": "navigate",
+      "context": "Privacy Policy"
+    },
+    {
+      "index": 9,
+      "filename": "eigenlayer-raw-009.png",
+      "url": "https://docs.eigencloud.xyz/eigencloud/legal/terms-of-service",
+      "action": "navigate",
+      "context": "Terms of Service"
+    },
+    {
+      "index": 10,
+      "filename": "eigenlayer-raw-010.png",
+      "url": "https://docs.eigencloud.xyz/eigencloud/legal/acceptable-use-policy",
+      "action": "navigate",
+      "context": "Acceptable Use Policy"
     }
   ]
 }

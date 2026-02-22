@@ -6,7 +6,7 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-20T11:41:43.568Z",
+  "crawledAt": "2026-02-22T01:28:34.499Z",
   "totalScreenshots": 2,
   "pageCopy": {
     "h1": "Welcome to Cashu",
@@ -26,15 +26,15 @@
     }
   ],
   "performance": {
-    "loadTime": 1617,
-    "domContentLoaded": 1613,
+    "loadTime": 1998,
+    "domContentLoaded": 1995,
     "lcp": null,
     "cls": null,
     "resourceCount": 67,
-    "transferSize": 955432,
+    "transferSize": 947979,
     "breakdown": {
-      "js": 784077,
-      "css": 167167,
+      "js": 777996,
+      "css": 165795,
       "images": 4188,
       "fonts": 0,
       "other": 0

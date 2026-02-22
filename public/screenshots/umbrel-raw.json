@@ -1,72 +1,54 @@
 {
   "slug": "umbrel",
-  "url": "https://umbrel.com",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-14T03:24:45.334Z",
-  "totalScreenshots": 5,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "Bring the cloud to your home with umbrelOS - a beautiful home server OS for self-hosting, and Umbrel Home - a plug-and-play home server. Install Nextcloud, Jellyfin, Bitcoin node, and hundreds of self-hosted apps in one click.",
-    "ogTitle": "Umbrel - Personal home cloud and OS for self-hosting",
-    "ogDescription": "Bring the cloud to your home with umbrelOS - a beautiful home server OS for self-hosting, and Umbrel Home - a plug-and-play home server. Install Nextcloud, Jellyfin, Bitcoin node, and hundreds of self-hosted apps in one click.",
-    "ctas": [],
-    "navItems": []
-  },
-  "techStack": [],
-  "performance": {
-    "loadTime": 3662,
-    "domContentLoaded": 150,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 108,
-    "transferSize": 4520969,
-    "breakdown": {
-      "js": 145428,
-      "css": 49946,
-      "images": 4324164,
-      "fonts": 0,
-      "other": 1431
-    }
-  },
-  "screens": [
+  "source": "browser-use",
+  "taskId": "eb022022-5392-4f21-b4ad-7eec37c4eb3e",
+  "crawledAt": "2026-02-22T02:26:54.467Z",
+  "totalScreenshots": 9,
+  "pages": [
     {
-      "index": 1,
-      "filename": "umbrel-raw-001.png",
-      "url": "https://umbrel.com/?country=ES",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/umbrel-raw-001.png"
     },
     {
-      "index": 2,
-      "filename": "umbrel-raw-002.png",
-      "url": "https://apps.umbrel.com/",
-      "action": "page",
-      "context": "App Store (/)"
+      "step": 2,
+      "label": "Umbrel Pro",
+      "file": "/screenshots/umbrel-raw-002.png"
     },
     {
-      "index": 3,
-      "filename": "umbrel-raw-003.png",
-      "url": "https://umbrel.com/support",
-      "action": "page",
-      "context": "SupportGet help with installing and troubleshootin (/support)"
+      "step": 3,
+      "label": "Umbrel Home",
+      "file": "/screenshots/umbrel-raw-003.png"
     },
     {
-      "index": 4,
-      "filename": "umbrel-raw-004.png",
-      "url": "https://umbrel.com/legal",
-      "action": "page",
-      "context": "Legal (/legal)"
+      "step": 4,
+      "label": "umbrelOS",
+      "file": "/screenshots/umbrel-raw-004.png"
     },
     {
-      "index": 5,
-      "filename": "umbrel-raw-005.png",
-      "url": "https://umbrel.com/this-page-does-not-exist-404-test",
-      "action": "common-path",
-      "context": "Path: /this-page-does-not-exist-404-test"
+      "step": 5,
+      "label": "App Store",
+      "file": "/screenshots/umbrel-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "Careers",
+      "file": "/screenshots/umbrel-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "Support",
+      "file": "/screenshots/umbrel-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "Community",
+      "file": "/screenshots/umbrel-raw-008.png"
+    },
+    {
+      "step": 9,
+      "label": "Legal",
+      "file": "/screenshots/umbrel-raw-009.png"
     }
   ]
 }

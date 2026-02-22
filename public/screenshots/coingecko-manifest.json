@@ -1,21 +1,57 @@
 {
   "slug": "coingecko",
-  "url": "https://www.coingecko.com",
-  "crawledAt": "2026-02-20T13:53:50.443Z",
-  "totalScreenshots": 2,
-  "totalStates": 2,
+  "url": "",
+  "crawledAt": "2026-02-22T02:27:04.621Z",
+  "totalScreenshots": 8,
+  "totalStates": 8,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/coingecko-home-1-landing-page.png"
+      "image": "/screenshots/coingecko-home-1-homepage.png"
     },
     {
       "step": 2,
-      "label": "API for Business",
+      "label": "Bitcoin",
       "flow": "Home",
-      "image": "/screenshots/coingecko-home-2-api-for-business.png"
+      "image": "/screenshots/coingecko-home-2-bitcoin.png"
+    },
+    {
+      "step": 3,
+      "label": "Exchanges",
+      "flow": "Home",
+      "image": "/screenshots/coingecko-home-3-exchanges.png"
+    },
+    {
+      "step": 4,
+      "label": "Categories",
+      "flow": "Home",
+      "image": "/screenshots/coingecko-home-4-categories.png"
+    },
+    {
+      "step": 5,
+      "label": "NFTs",
+      "flow": "Home",
+      "image": "/screenshots/coingecko-home-5-nfts.png"
+    },
+    {
+      "step": 6,
+      "label": "News",
+      "flow": "Home",
+      "image": "/screenshots/coingecko-home-6-news.png"
+    },
+    {
+      "step": 7,
+      "label": "API",
+      "flow": "Home",
+      "image": "/screenshots/coingecko-home-7-api.png"
+    },
+    {
+      "step": 1,
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/coingecko-settings-1-about.png"
     }
   ]
 }

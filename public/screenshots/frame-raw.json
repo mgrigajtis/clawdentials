@@ -1,80 +1,54 @@
 {
   "slug": "frame",
-  "url": "https://frame.sh",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-20T15:29:05.673Z",
-  "totalScreenshots": 4,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "Modern web3 for Desktop",
-    "ogTitle": null,
-    "ogDescription": null,
-    "ctas": [
-      "Docs",
-      "Blog",
-      "Feedback",
-      "Careers",
-      "Docs",
-      "Blog",
-      "Feedback",
-      "Careers"
-    ],
-    "navItems": []
-  },
-  "techStack": [
+  "source": "browser-use",
+  "taskId": "640df79f-1329-4708-baac-c84a18233314",
+  "crawledAt": "2026-02-22T02:26:42.962Z",
+  "totalScreenshots": 9,
+  "pages": [
     {
-      "category": "Analytics",
-      "name": "Google Analytics",
-      "evidence": "ga/gtag"
-    }
-  ],
-  "performance": {
-    "loadTime": 3046,
-    "domContentLoaded": 2354,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 19,
-    "transferSize": 0,
-    "breakdown": {
-      "js": 0,
-      "css": 0,
-      "images": 0,
-      "fonts": 0,
-      "other": 0
-    }
-  },
-  "screens": [
-    {
-      "index": 1,
-      "filename": "frame-raw-001.png",
-      "url": "https://frame.sh/",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/frame-raw-001.png"
     },
     {
-      "index": 2,
-      "filename": "frame-raw-002.png",
-      "url": "https://docs.frame.sh/",
-      "action": "page",
-      "context": "Docs (/)"
+      "step": 2,
+      "label": "Documentation",
+      "file": "/screenshots/frame-raw-002.png"
     },
     {
-      "index": 3,
-      "filename": "frame-raw-003.png",
-      "url": "https://blog.frame.sh/",
-      "action": "page",
-      "context": "Blog (/)"
+      "step": 3,
+      "label": "Docs Introduction",
+      "file": "/screenshots/frame-raw-003.png"
     },
     {
-      "index": 4,
-      "filename": "frame-raw-004.png",
-      "url": "https://frame.canny.io/",
-      "action": "page",
-      "context": "Feedback (/)"
+      "step": 4,
+      "label": "Blog",
+      "file": "/screenshots/frame-raw-004.png"
+    },
+    {
+      "step": 5,
+      "label": "Feedback",
+      "file": "/screenshots/frame-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "Careers",
+      "file": "/screenshots/frame-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "Careers Detail",
+      "file": "/screenshots/frame-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "Getting Started",
+      "file": "/screenshots/frame-raw-008.png"
+    },
+    {
+      "step": 9,
+      "label": "GitHub",
+      "file": "/screenshots/frame-raw-009.png"
     }
   ]
 }

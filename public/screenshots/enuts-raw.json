@@ -6,7 +6,7 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-20T11:41:40.632Z",
+  "crawledAt": "2026-02-22T01:30:30.076Z",
   "totalScreenshots": 2,
   "pageCopy": {
     "h1": "ENUTS.\nPRIVATE.\nSIMPLE.",
@@ -26,15 +26,15 @@
     }
   ],
   "performance": {
-    "loadTime": 4393,
-    "domContentLoaded": 4392,
+    "loadTime": 3308,
+    "domContentLoaded": 3307,
     "lcp": null,
     "cls": null,
     "resourceCount": 3,
-    "transferSize": 245005,
+    "transferSize": 244834,
     "breakdown": {
-      "js": 183103,
-      "css": 61902,
+      "js": 183105,
+      "css": 61729,
       "images": 0,
       "fonts": 0,
       "other": 0

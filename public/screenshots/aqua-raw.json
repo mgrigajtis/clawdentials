@@ -1,52 +1,44 @@
 {
   "slug": "aqua",
-  "url": "https://aquawallet.io",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-20T11:47:13.307Z",
-  "totalScreenshots": 1,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "AQUA Wallet is a self-custodial Bitcoin and Liquid wallet designed for fast, private, and easy transactions. Manage BTC, USDt, and assets seamlessly with full control over your funds.",
-    "ogTitle": "AQUA Wallet – Bitcoin Made Simple",
-    "ogDescription": "AQUA Wallet is a fast, private, and self-custodial Bitcoin and Liquid wallet. Send, receive, and manage BTC and assets securely with ease.",
-    "ctas": [
-      "Get The App →"
-    ],
-    "navItems": [
-      "Home",
-      "Features",
-      "Contact Us",
-      "FAQ",
-      "Download AQUA"
-    ]
-  },
-  "techStack": [],
-  "performance": {
-    "loadTime": 2369,
-    "domContentLoaded": 440,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 34,
-    "transferSize": 71183,
-    "breakdown": {
-      "js": 3600,
-      "css": 1500,
-      "images": 65783,
-      "fonts": 300,
-      "other": 0
-    }
-  },
-  "screens": [
+  "source": "browser-use",
+  "taskId": "ccc5d876-e657-48dc-82a2-e74eef70e819",
+  "crawledAt": "2026-02-22T02:27:28.824Z",
+  "totalScreenshots": 7,
+  "pages": [
     {
-      "index": 1,
-      "filename": "aqua-raw-001.png",
-      "url": "https://aquawallet.io/",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/aqua-raw-001.png"
+    },
+    {
+      "step": 2,
+      "label": "Features",
+      "file": "/screenshots/aqua-raw-002.png"
+    },
+    {
+      "step": 3,
+      "label": "Contact",
+      "file": "/screenshots/aqua-raw-003.png"
+    },
+    {
+      "step": 4,
+      "label": "Privacy",
+      "file": "/screenshots/aqua-raw-004.png"
+    },
+    {
+      "step": 5,
+      "label": "Terms",
+      "file": "/screenshots/aqua-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "Download",
+      "file": "/screenshots/aqua-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "Footer",
+      "file": "/screenshots/aqua-raw-007.png"
     }
   ]
 }

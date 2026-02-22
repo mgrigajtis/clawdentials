@@ -1,33 +1,69 @@
 {
   "slug": "electrum",
-  "url": "https://electrum.org",
-  "crawledAt": "2026-02-14T12:03:25.497Z",
-  "totalScreenshots": 4,
-  "totalStates": 4,
+  "url": "",
+  "crawledAt": "2026-02-22T02:26:36.326Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/electrum-home-1-landing-page.png"
+      "image": "/screenshots/electrum-home-1-homepage.png"
     },
     {
       "step": 2,
-      "label": "Previous releases",
+      "label": "Download",
       "flow": "Home",
-      "image": "/screenshots/electrum-home-2-previous-releases.png"
+      "image": "/screenshots/electrum-home-2-download.png"
     },
     {
       "step": 3,
-      "label": "More information",
+      "label": "SPV",
       "flow": "Home",
-      "image": "/screenshots/electrum-home-3-more-information.png"
+      "image": "/screenshots/electrum-home-3-spv.png"
     },
     {
       "step": 4,
-      "label": "this-page-does-not-exist-404-test page",
+      "label": "Development",
       "flow": "Home",
-      "image": "/screenshots/electrum-home-4-thispagedoesnotexist404test-page.png"
+      "image": "/screenshots/electrum-home-4-development.png"
+    },
+    {
+      "step": 1,
+      "label": "Documentation",
+      "flow": "Settings",
+      "image": "/screenshots/electrum-settings-1-documentation.png"
+    },
+    {
+      "step": 2,
+      "label": "Docs Detail",
+      "flow": "Settings",
+      "image": "/screenshots/electrum-settings-2-docs-detail.png"
+    },
+    {
+      "step": 3,
+      "label": "Community",
+      "flow": "Settings",
+      "image": "/screenshots/electrum-settings-3-community.png"
+    },
+    {
+      "step": 4,
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/electrum-settings-4-about.png"
+    },
+    {
+      "step": 5,
+      "label": "Disclaimer",
+      "flow": "Settings",
+      "image": "/screenshots/electrum-settings-5-disclaimer.png"
+    },
+    {
+      "step": 6,
+      "label": "FAQ",
+      "flow": "Settings",
+      "image": "/screenshots/electrum-settings-6-faq.png"
     }
   ]
 }

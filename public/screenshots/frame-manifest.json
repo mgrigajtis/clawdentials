@@ -1,33 +1,63 @@
 {
   "slug": "frame",
-  "url": "https://frame.sh",
-  "crawledAt": "2026-02-20T15:29:05.673Z",
-  "totalScreenshots": 4,
-  "totalStates": 4,
+  "url": "",
+  "crawledAt": "2026-02-22T02:26:42.962Z",
+  "totalScreenshots": 9,
+  "totalStates": 9,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/frame-home-1-landing-page.png"
+      "image": "/screenshots/frame-home-1-homepage.png"
     },
     {
       "step": 2,
-      "label": "Docs",
+      "label": "Feedback",
       "flow": "Home",
-      "image": "/screenshots/frame-home-2-docs.png"
+      "image": "/screenshots/frame-home-2-feedback.png"
+    },
+    {
+      "step": 3,
+      "label": "Getting Started",
+      "flow": "Home",
+      "image": "/screenshots/frame-home-3-getting-started.png"
+    },
+    {
+      "step": 4,
+      "label": "GitHub",
+      "flow": "Home",
+      "image": "/screenshots/frame-home-4-github.png"
+    },
+    {
+      "step": 1,
+      "label": "Documentation",
+      "flow": "Settings",
+      "image": "/screenshots/frame-settings-1-documentation.png"
+    },
+    {
+      "step": 2,
+      "label": "Docs Introduction",
+      "flow": "Settings",
+      "image": "/screenshots/frame-settings-2-docs-introduction.png"
     },
     {
       "step": 3,
       "label": "Blog",
-      "flow": "Home",
-      "image": "/screenshots/frame-home-3-blog.png"
+      "flow": "Settings",
+      "image": "/screenshots/frame-settings-3-blog.png"
     },
     {
       "step": 4,
-      "label": "Feedback",
-      "flow": "Home",
-      "image": "/screenshots/frame-home-4-feedback.png"
+      "label": "Careers",
+      "flow": "Settings",
+      "image": "/screenshots/frame-settings-4-careers.png"
+    },
+    {
+      "step": 5,
+      "label": "Careers Detail",
+      "flow": "Settings",
+      "image": "/screenshots/frame-settings-5-careers-detail.png"
     }
   ]
 }

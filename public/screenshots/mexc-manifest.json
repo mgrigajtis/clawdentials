@@ -1,15 +1,69 @@
 {
   "slug": "mexc",
   "url": "https://www.mexc.com",
-  "crawledAt": "2026-02-14T15:07:24.544Z",
-  "totalScreenshots": 1,
-  "totalStates": 1,
+  "crawledAt": "2026-02-22T01:55:03.878Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/mexc-home-1-landing-page.png"
+      "image": "/screenshots/mexc-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "Fees",
+      "flow": "Home",
+      "image": "/screenshots/mexc-home-2-fees.png"
+    },
+    {
+      "step": 3,
+      "label": "Blog",
+      "flow": "Home",
+      "image": "/screenshots/mexc-home-3-blog.png"
+    },
+    {
+      "step": 4,
+      "label": "Institutional Services",
+      "flow": "Home",
+      "image": "/screenshots/mexc-home-4-institutional-services.png"
+    },
+    {
+      "step": 5,
+      "label": "Announcements",
+      "flow": "Home",
+      "image": "/screenshots/mexc-home-5-announcements.png"
+    },
+    {
+      "step": 6,
+      "label": "Download",
+      "flow": "Home",
+      "image": "/screenshots/mexc-home-6-download.png"
+    },
+    {
+      "step": 1,
+      "label": "Markets",
+      "flow": "Swap",
+      "image": "/screenshots/mexc-swap-1-markets.png"
+    },
+    {
+      "step": 1,
+      "label": "About",
+      "flow": "Settings",
+      "image": "/screenshots/mexc-settings-1-about.png"
+    },
+    {
+      "step": 2,
+      "label": "Learn",
+      "flow": "Settings",
+      "image": "/screenshots/mexc-settings-2-learn.png"
+    },
+    {
+      "step": 3,
+      "label": "Support",
+      "flow": "Settings",
+      "image": "/screenshots/mexc-settings-3-support.png"
     }
   ]
 }

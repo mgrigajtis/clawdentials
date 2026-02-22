@@ -1,76 +1,59 @@
 {
   "slug": "electrum",
-  "url": "https://electrum.org",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-14T12:03:25.497Z",
-  "totalScreenshots": 4,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "Electrum Bitcoin Wallet.",
-    "ogTitle": null,
-    "ogDescription": null,
-    "ctas": [
-      "Bitcoin Wallet",
-      "Home",
-      "Download",
-      "Documentation",
-      "Community",
-      "About",
-      "Release notes",
-      "Previous releases",
-      "ThomasV",
-      "SomberNight"
-    ],
-    "navItems": []
-  },
-  "techStack": [],
-  "performance": {
-    "loadTime": 442,
-    "domContentLoaded": 191,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 37,
-    "transferSize": 2926735,
-    "breakdown": {
-      "js": 60582,
-      "css": 63073,
-      "images": 2801802,
-      "fonts": 0,
-      "other": 1278
-    }
-  },
-  "screens": [
+  "source": "browser-use",
+  "taskId": "35da0a14-549f-4c99-81db-16a8fb404ede",
+  "crawledAt": "2026-02-22T02:26:36.326Z",
+  "totalScreenshots": 10,
+  "pages": [
     {
-      "index": 1,
-      "filename": "electrum-raw-001.png",
-      "url": "https://electrum.org/",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/electrum-raw-001.png"
     },
     {
-      "index": 2,
-      "filename": "electrum-raw-002.png",
-      "url": "https://download.electrum.org/",
-      "action": "page",
-      "context": "Previous releases (/)"
+      "step": 2,
+      "label": "Download",
+      "file": "/screenshots/electrum-raw-002.png"
     },
     {
-      "index": 3,
-      "filename": "electrum-raw-003.png",
-      "url": "https://electrum.readthedocs.io/en/latest/spv.html",
-      "action": "page",
-      "context": "More information (/en/latest/spv.html)"
+      "step": 3,
+      "label": "Documentation",
+      "file": "/screenshots/electrum-raw-003.png"
     },
     {
-      "index": 4,
-      "filename": "electrum-raw-004.png",
-      "url": "https://electrum.org/this-page-does-not-exist-404-test",
-      "action": "common-path",
-      "context": "Path: /this-page-does-not-exist-404-test"
+      "step": 4,
+      "label": "Docs Detail",
+      "file": "/screenshots/electrum-raw-004.png"
+    },
+    {
+      "step": 5,
+      "label": "SPV",
+      "file": "/screenshots/electrum-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "Community",
+      "file": "/screenshots/electrum-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "About",
+      "file": "/screenshots/electrum-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "Development",
+      "file": "/screenshots/electrum-raw-008.png"
+    },
+    {
+      "step": 9,
+      "label": "Disclaimer",
+      "file": "/screenshots/electrum-raw-009.png"
+    },
+    {
+      "step": 10,
+      "label": "FAQ",
+      "file": "/screenshots/electrum-raw-010.png"
     }
   ]
 }

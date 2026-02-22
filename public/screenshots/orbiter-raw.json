@@ -6,82 +6,79 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-14T19:09:49.517Z",
-  "totalScreenshots": 4,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "Bridge and swap crypto assets quickly, affordably, and securely across Arbitrum, Base, Optimism, Solana, BNB Chain, Polygon, Ethereum, and more blockchain ecosystems with Orbiter.",
-    "ogTitle": "Orbiter Finance - Bridge & Swap",
-    "ogDescription": "Bridge and swap crypto assets quickly, affordably, and securely across Arbitrum, Base, Optimism, Solana, BNB Chain, Polygon, Ethereum, and more blockchain ecosystems with Orbiter.",
-    "ctas": [
-      "Trade",
-      "Market",
-      "Quests",
-      "More",
-      "Connect Wallet"
-    ],
-    "navItems": []
-  },
-  "techStack": [
-    {
-      "category": "CSS",
-      "name": "Tailwind CSS",
-      "evidence": "Responsive utility classes"
-    },
-    {
-      "category": "Analytics",
-      "name": "Google Analytics",
-      "evidence": "ga/gtag"
-    },
-    {
-      "category": "Error Tracking",
-      "name": "Sentry",
-      "evidence": "__SENTRY__ or sentry script"
-    }
-  ],
-  "performance": {
-    "loadTime": 1061,
-    "domContentLoaded": 274,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 221,
-    "transferSize": 6683238,
-    "breakdown": {
-      "js": 6626547,
-      "css": 37059,
-      "images": 10748,
-      "fonts": 0,
-      "other": 8884
-    }
-  },
+  "crawledAt": "2026-02-22T01:53:43.159Z",
+  "totalScreenshots": 10,
+  "source": "browser-use",
   "screens": [
     {
       "index": 1,
       "filename": "orbiter-raw-001.png",
       "url": "https://www.orbiter.finance/trade/Arbitrum",
       "action": "landing",
-      "context": "Landing page"
+      "context": "Bridge interface"
     },
     {
       "index": 2,
       "filename": "orbiter-raw-002.png",
-      "url": "https://www.orbiter.finance/trade/Arbitrum",
-      "action": "interaction",
-      "context": "Landing — More menu"
+      "url": "https://www.orbiter.finance/meme/vote/58",
+      "action": "navigate",
+      "context": "Market / Meme voting"
     },
     {
       "index": 3,
       "filename": "orbiter-raw-003.png",
-      "url": "https://www.orbiter.finance/this-page-does-not-exist-404-test",
-      "action": "common-path",
-      "context": "Path: /this-page-does-not-exist-404-test"
+      "url": "https://www.orbiter.finance/quest",
+      "action": "navigate",
+      "context": "Quests"
     },
     {
       "index": 4,
       "filename": "orbiter-raw-004.png",
+      "url": "https://www.orbiter.finance/explore",
+      "action": "navigate",
+      "context": "Explorer"
+    },
+    {
+      "index": 5,
+      "filename": "orbiter-raw-005.png",
+      "url": "https://www.orbiter.finance/airdrop",
+      "action": "navigate",
+      "context": "Airdrop"
+    },
+    {
+      "index": 6,
+      "filename": "orbiter-raw-006.png",
+      "url": "https://www.orbiter.finance/collector",
+      "action": "navigate",
+      "context": "Collector"
+    },
+    {
+      "index": 7,
+      "filename": "orbiter-raw-007.png",
       "url": "https://www.orbiter.finance/referral",
-      "action": "common-path",
-      "context": "Path: /referral"
+      "action": "navigate",
+      "context": "Referral"
+    },
+    {
+      "index": 8,
+      "filename": "orbiter-raw-008.png",
+      "url": "https://get.orbiter.finance/Orbiter_Finance_Terms_of_Use.pdf",
+      "action": "navigate",
+      "context": "Terms of Use"
+    },
+    {
+      "index": 9,
+      "filename": "orbiter-raw-009.png",
+      "url": "https://testnet.orbiter.finance/trade",
+      "action": "navigate",
+      "context": "Testnet"
+    },
+    {
+      "index": 10,
+      "filename": "orbiter-raw-010.png",
+      "url": "https://www.orbiter.finance/blog",
+      "action": "navigate",
+      "context": "Blog"
     }
   ]
 }

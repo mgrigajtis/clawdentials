@@ -1,91 +1,54 @@
 {
   "slug": "phantom",
-  "url": "https://phantom.app",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-14T03:08:41.377Z",
-  "totalScreenshots": 1,
-  "pageCopy": {
-    "h1": "Your home for trading\ncrypto, predictions,\nand more",
-    "metaDescription": null,
-    "ogTitle": "Phantom: The crypto app for everyone",
-    "ogDescription": "Phantom is your go-to crypto app. Buy cryptocurrency. Trade memecoins. Store assets. Grow your portfolio. Available on Solana, Ethereum, Bitcoin, Base & Sui.",
-    "ctas": [
-      "See more",
-      "Buy and sell all types of crypto in an instant.",
-      "Find trending tokens, top traders, and apps.",
-      "Trade big moments in culture with Prediction Markets.",
-      "Go long, go short, go anywhere with Perps.",
-      "Access powerful trading tools on desktop with Terminal.",
-      "See more",
-      "One home for all of your cash and crypto.",
-      "Fund with tokens or your paycheck. Even pay friends.",
-      "Spend wherever Apple Pay, Google Pay, or VISA is accepted."
-    ],
-    "navItems": [
-      "Explore",
-      "Support",
-      "Download",
-      "Logo PhantomLogo Phantom",
-      "Security",
-      "Feature Requests",
-      "Learn",
-      "Blog",
-      "Docs",
-      "Taxes",
-      "About",
-      "Careers",
-      "Press Kit",
-      "X.com",
-      "LinkedIn",
-      "Instagram",
-      "YouTube",
-      "Reddit",
-      "Podcast"
-    ]
-  },
-  "techStack": [
+  "source": "browser-use",
+  "taskId": "5ceb1f91-8c64-4eac-8f74-f362066f3524",
+  "crawledAt": "2026-02-22T02:26:24.024Z",
+  "totalScreenshots": 9,
+  "pages": [
     {
-      "category": "Analytics",
-      "name": "Google Analytics",
-      "evidence": "ga/gtag"
+      "step": 1,
+      "label": "Homepage",
+      "file": "/screenshots/phantom-raw-001.png"
     },
     {
-      "category": "Analytics",
-      "name": "Datadog",
-      "evidence": "DD_RUM or datadog script"
+      "step": 2,
+      "label": "Download",
+      "file": "/screenshots/phantom-raw-002.png"
     },
     {
-      "category": "Error Tracking",
-      "name": "Sentry",
-      "evidence": "__SENTRY__ or sentry script"
-    }
-  ],
-  "performance": {
-    "loadTime": 2939,
-    "domContentLoaded": 624,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 154,
-    "transferSize": 1471387,
-    "breakdown": {
-      "js": 1194171,
-      "css": 68359,
-      "images": 0,
-      "fonts": 113920,
-      "other": 94937
-    }
-  },
-  "screens": [
+      "step": 3,
+      "label": "Get Started",
+      "file": "/screenshots/phantom-raw-003.png"
+    },
     {
-      "index": 1,
-      "filename": "phantom-raw-001.png",
-      "url": "https://phantom.com/",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 4,
+      "label": "Security",
+      "file": "/screenshots/phantom-raw-004.png"
+    },
+    {
+      "step": 5,
+      "label": "Blog",
+      "file": "/screenshots/phantom-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "Support",
+      "file": "/screenshots/phantom-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "Developers",
+      "file": "/screenshots/phantom-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "About",
+      "file": "/screenshots/phantom-raw-008.png"
+    },
+    {
+      "step": 9,
+      "label": "Privacy",
+      "file": "/screenshots/phantom-raw-009.png"
     }
   ]
 }

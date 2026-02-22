@@ -1,0 +1,98 @@
+{
+  "slug": "strike",
+  "url": "https://strike.me",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "crawledAt": "2026-02-22T01:53:55.845Z",
+  "totalScreenshots": 12,
+  "source": "browser-use",
+  "screens": [
+    {
+      "index": 1,
+      "filename": "strike-raw-001.png",
+      "url": "https://strike.me/",
+      "action": "landing",
+      "context": "Homepage"
+    },
+    {
+      "index": 2,
+      "filename": "strike-raw-002.png",
+      "url": "https://strike.me/bitcoin/",
+      "action": "navigate",
+      "context": "Bitcoin"
+    },
+    {
+      "index": 3,
+      "filename": "strike-raw-003.png",
+      "url": "https://strike.me/lending/",
+      "action": "navigate",
+      "context": "Lending"
+    },
+    {
+      "index": 4,
+      "filename": "strike-raw-004.png",
+      "url": "https://strike.me/bill-pay/",
+      "action": "navigate",
+      "context": "Bill Pay"
+    },
+    {
+      "index": 5,
+      "filename": "strike-raw-005.png",
+      "url": "https://strike.me/payments/",
+      "action": "navigate",
+      "context": "Payments"
+    },
+    {
+      "index": 6,
+      "filename": "strike-raw-006.png",
+      "url": "https://strike.me/private/",
+      "action": "navigate",
+      "context": "Private"
+    },
+    {
+      "index": 7,
+      "filename": "strike-raw-007.png",
+      "url": "https://strike.me/business/",
+      "action": "navigate",
+      "context": "Business"
+    },
+    {
+      "index": 8,
+      "filename": "strike-raw-008.png",
+      "url": "https://strike.me/developer/",
+      "action": "navigate",
+      "context": "Developer"
+    },
+    {
+      "index": 9,
+      "filename": "strike-raw-009.png",
+      "url": "https://strike.me/learn/",
+      "action": "navigate",
+      "context": "Learn"
+    },
+    {
+      "index": 10,
+      "filename": "strike-raw-010.png",
+      "url": "https://strike.me/blog/",
+      "action": "navigate",
+      "context": "Blog"
+    },
+    {
+      "index": 11,
+      "filename": "strike-raw-011.png",
+      "url": "https://strike.me/faq/",
+      "action": "navigate",
+      "context": "FAQ"
+    },
+    {
+      "index": 12,
+      "filename": "strike-raw-012.png",
+      "url": "https://strike.me/careers/",
+      "action": "navigate",
+      "context": "Careers"
+    }
+  ]
+}

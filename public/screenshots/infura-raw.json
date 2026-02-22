@@ -6,80 +6,72 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-20T15:50:42.849Z",
-  "totalScreenshots": 1,
-  "pageCopy": {
-    "h1": "The world's most powerful suite of high availability blockchain APIs and developer tools",
-    "metaDescription": "Infura's development suite provides instant, scalable API access to the Ethereum and IPFS networks. Connect your app to Ethereum and IPFS now, for free!",
-    "ogTitle": "Infura - Home | Web3 Development Platform | IPFS API & Gateway | Blockchain Node Service",
-    "ogDescription": "Infura's development suite provides instant, scalable API access to the Ethereum and IPFS networks. Connect your app to Ethereum and IPFS now, for free!",
-    "ctas": [
-      "DISMISS",
-      "Dismiss",
-      "Contact Us",
-      "Sign In",
-      "EN",
-      "LineaLayer 2Ethereum",
-      "AvalancheLayer 1",
-      "OptimismLayer 2Ethereum",
-      "ArbitrumLayer 2Ethereum",
-      "MonadLayer 1"
-    ],
-    "navItems": [
-      "Contact Us",
-      "Sign In",
-      "EN"
-    ]
-  },
-  "techStack": [
-    {
-      "category": "Framework",
-      "name": "Next.js",
-      "evidence": "__NEXT_DATA__ or #__next"
-    },
-    {
-      "category": "CSS",
-      "name": "Tailwind CSS",
-      "evidence": "Responsive utility classes"
-    },
-    {
-      "category": "Analytics",
-      "name": "Segment",
-      "evidence": "analytics.js or segment script"
-    },
-    {
-      "category": "Analytics",
-      "name": "Google Analytics",
-      "evidence": "ga/gtag"
-    },
-    {
-      "category": "Analytics",
-      "name": "Hotjar",
-      "evidence": "hj or hotjar script"
-    }
-  ],
-  "performance": {
-    "loadTime": 510,
-    "domContentLoaded": 300,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 115,
-    "transferSize": 83087,
-    "breakdown": {
-      "js": 1452,
-      "css": 900,
-      "images": 3042,
-      "fonts": 0,
-      "other": 77693
-    }
-  },
+  "crawledAt": "2026-02-22T01:54:01.373Z",
+  "totalScreenshots": 9,
+  "source": "browser-use",
   "screens": [
     {
       "index": 1,
       "filename": "infura-raw-001.png",
       "url": "https://www.infura.io/",
       "action": "landing",
-      "context": "Landing page"
+      "context": "Homepage"
+    },
+    {
+      "index": 2,
+      "filename": "infura-raw-002.png",
+      "url": "https://www.infura.io/pricing",
+      "action": "navigate",
+      "context": "Pricing"
+    },
+    {
+      "index": 3,
+      "filename": "infura-raw-003.png",
+      "url": "https://www.infura.io/networks",
+      "action": "navigate",
+      "context": "Networks"
+    },
+    {
+      "index": 4,
+      "filename": "infura-raw-004.png",
+      "url": "https://www.infura.io/about",
+      "action": "navigate",
+      "context": "About"
+    },
+    {
+      "index": 5,
+      "filename": "infura-raw-005.png",
+      "url": "https://www.infura.io/use-cases",
+      "action": "navigate",
+      "context": "Use Cases"
+    },
+    {
+      "index": 6,
+      "filename": "infura-raw-006.png",
+      "url": "https://www.infura.io/use-cases/developer-stories",
+      "action": "navigate",
+      "context": "Developer Stories"
+    },
+    {
+      "index": 7,
+      "filename": "infura-raw-007.png",
+      "url": "https://www.infura.io/faq/general",
+      "action": "navigate",
+      "context": "FAQ"
+    },
+    {
+      "index": 8,
+      "filename": "infura-raw-008.png",
+      "url": "https://docs.metamask.io/services/",
+      "action": "navigate",
+      "context": "Documentation"
+    },
+    {
+      "index": 9,
+      "filename": "infura-raw-009.png",
+      "url": "https://metamask.io/en-GB/news/developers/",
+      "action": "navigate",
+      "context": "Blog / News"
     }
   ]
 }

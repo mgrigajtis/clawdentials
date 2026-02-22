@@ -1,0 +1,84 @@
+{
+  "slug": "bybit",
+  "url": "https://www.bybit.com",
+  "device": "desktop",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "crawledAt": "2026-02-22T01:53:49.863Z",
+  "totalScreenshots": 10,
+  "source": "browser-use",
+  "screens": [
+    {
+      "index": 1,
+      "filename": "bybit-raw-001.png",
+      "url": "https://www.bybit.com/en/",
+      "action": "landing",
+      "context": "Homepage"
+    },
+    {
+      "index": 2,
+      "filename": "bybit-raw-002.png",
+      "url": "https://www.bybit.com/en/promo/global/aboutus/",
+      "action": "navigate",
+      "context": "About"
+    },
+    {
+      "index": 3,
+      "filename": "bybit-raw-003.png",
+      "url": "https://www.bybit.com/en/markets/overview",
+      "action": "navigate",
+      "context": "Markets"
+    },
+    {
+      "index": 4,
+      "filename": "bybit-raw-004.png",
+      "url": "https://www.bybit.com/en/help-center/article/Trading-Fees",
+      "action": "navigate",
+      "context": "Trading Fees"
+    },
+    {
+      "index": 5,
+      "filename": "bybit-raw-005.png",
+      "url": "https://www.bybit.com/en/promo/global/careers/",
+      "action": "navigate",
+      "context": "Careers"
+    },
+    {
+      "index": 6,
+      "filename": "bybit-raw-006.png",
+      "url": "https://learn.bybit.com/en",
+      "action": "navigate",
+      "context": "Learn"
+    },
+    {
+      "index": 7,
+      "filename": "bybit-raw-007.png",
+      "url": "https://www.bybit.com/en/announcement-info/deposit-withdraw/",
+      "action": "navigate",
+      "context": "Announcements"
+    },
+    {
+      "index": 8,
+      "filename": "bybit-raw-008.png",
+      "url": "https://www.bybit.com/en/help-center/homepage",
+      "action": "navigate",
+      "context": "Help Center"
+    },
+    {
+      "index": 9,
+      "filename": "bybit-raw-009.png",
+      "url": "https://www.bybit.com/copyTrade/",
+      "action": "navigate",
+      "context": "Copy Trading"
+    },
+    {
+      "index": 10,
+      "filename": "bybit-raw-010.png",
+      "url": "https://learn.bybit.com/en/insights",
+      "action": "navigate",
+      "context": "Blog / Insights"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "slug": "strike",
+  "url": "https://strike.me",
+  "crawledAt": "2026-02-22T01:53:55.845Z",
+  "totalScreenshots": 12,
+  "totalStates": 12,
+  "screens": [
+    {
+      "step": 1,
+      "label": "Homepage",
+      "flow": "Home",
+      "image": "/screenshots/strike-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "Bitcoin",
+      "flow": "Home",
+      "image": "/screenshots/strike-home-2-bitcoin.png"
+    },
+    {
+      "step": 3,
+      "label": "Bill Pay",
+      "flow": "Home",
+      "image": "/screenshots/strike-home-3-bill-pay.png"
+    },
+    {
+      "step": 4,
+      "label": "Private",
+      "flow": "Home",
+      "image": "/screenshots/strike-home-4-private.png"
+    },
+    {
+      "step": 5,
+      "label": "Business",
+      "flow": "Home",
+      "image": "/screenshots/strike-home-5-business.png"
+    },
+    {
+      "step": 6,
+      "label": "Developer",
+      "flow": "Home",
+      "image": "/screenshots/strike-home-6-developer.png"
+    },
+    {
+      "step": 1,
+      "label": "Lending",
+      "flow": "Staking",
+      "image": "/screenshots/strike-staking-1-lending.png"
+    },
+    {
+      "step": 1,
+      "label": "Payments",
+      "flow": "Send",
+      "image": "/screenshots/strike-send-1-payments.png"
+    },
+    {
+      "step": 1,
+      "label": "Learn",
+      "flow": "Settings",
+      "image": "/screenshots/strike-settings-1-learn.png"
+    },
+    {
+      "step": 2,
+      "label": "Blog",
+      "flow": "Settings",
+      "image": "/screenshots/strike-settings-2-blog.png"
+    },
+    {
+      "step": 3,
+      "label": "FAQ",
+      "flow": "Settings",
+      "image": "/screenshots/strike-settings-3-faq.png"
+    },
+    {
+      "step": 4,
+      "label": "Careers",
+      "flow": "Settings",
+      "image": "/screenshots/strike-settings-4-careers.png"
+    }
+  ]
+}

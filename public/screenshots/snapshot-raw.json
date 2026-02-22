@@ -1,80 +1,49 @@
 {
   "slug": "snapshot",
-  "url": "https://snapshot.org",
-  "device": "desktop",
-  "viewport": {
-    "width": 1440,
-    "height": 900
-  },
-  "crawledAt": "2026-02-20T11:41:36.110Z",
-  "totalScreenshots": 3,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": null,
-    "ogTitle": null,
-    "ogDescription": null,
-    "ctas": [
-      "Protocol\nSnapshot",
-      "Category\nAll categories",
-      "Decentraland\n1\n2.8k\n35k",
-      "Follow",
-      "Convex Finance\n2\n2.1k\n5.8k",
-      "Follow",
-      "The Sandbox DAO\n1\n39\n14k",
-      "Follow",
-      "XMAQUINA\n1\n14\n116",
-      "Follow"
-    ],
-    "navItems": []
-  },
-  "techStack": [
+  "source": "browser-use",
+  "taskId": "35b0c2e4-88c4-4ac4-871b-070ac3aa8878",
+  "crawledAt": "2026-02-22T02:26:57.989Z",
+  "totalScreenshots": 8,
+  "pages": [
     {
-      "category": "Framework",
-      "name": "Vue.js",
-      "evidence": "__VUE__"
+      "step": 1,
+      "label": "Explore",
+      "file": "/screenshots/snapshot-raw-001.png"
     },
     {
-      "category": "CSS",
-      "name": "Tailwind CSS",
-      "evidence": "Responsive utility classes"
-    }
-  ],
-  "performance": {
-    "loadTime": 2581,
-    "domContentLoaded": 2209,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 65,
-    "transferSize": 1326530,
-    "breakdown": {
-      "js": 1273043,
-      "css": 53487,
-      "images": 0,
-      "fonts": 0,
-      "other": 0
-    }
-  },
-  "screens": [
-    {
-      "index": 1,
-      "filename": "snapshot-raw-001.png",
-      "url": "https://snapshot.org/#/explore",
-      "action": "landing",
-      "context": "Landing page"
+      "step": 2,
+      "label": "Uniswap DAO",
+      "file": "/screenshots/snapshot-raw-002.png"
     },
     {
-      "index": 2,
-      "filename": "snapshot-raw-002.png",
-      "url": "https://snapshot.org/#/explore",
-      "action": "scroll",
-      "context": "Landing page — scrolled 1"
+      "step": 3,
+      "label": "Proposal",
+      "file": "/screenshots/snapshot-raw-003.png"
     },
     {
-      "index": 3,
-      "filename": "snapshot-raw-003.png",
-      "url": "https://snapshot.org/this-page-does-not-exist-404-test",
-      "action": "common-path",
-      "context": "Path: /this-page-does-not-exist-404-test"
+      "step": 4,
+      "label": "Aave DAO",
+      "file": "/screenshots/snapshot-raw-004.png"
+    },
+    {
+      "step": 5,
+      "label": "ENS",
+      "file": "/screenshots/snapshot-raw-005.png"
+    },
+    {
+      "step": 6,
+      "label": "About",
+      "file": "/screenshots/snapshot-raw-006.png"
+    },
+    {
+      "step": 7,
+      "label": "Documentation",
+      "file": "/screenshots/snapshot-raw-007.png"
+    },
+    {
+      "step": 8,
+      "label": "Help",
+      "file": "/screenshots/snapshot-raw-008.png"
     }
   ]
 }

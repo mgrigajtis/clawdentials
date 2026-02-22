@@ -1,15 +1,69 @@
 {
   "slug": "hyperliquid",
   "url": "https://hyperliquid.xyz",
-  "crawledAt": "2026-02-14T17:14:19.898Z",
-  "totalScreenshots": 1,
-  "totalStates": 1,
+  "crawledAt": "2026-02-22T01:53:36.803Z",
+  "totalScreenshots": 10,
+  "totalStates": 10,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/hyperliquid-home-1-landing-page.png"
+      "image": "/screenshots/hyperliquid-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "Stats dashboard",
+      "flow": "Home",
+      "image": "/screenshots/hyperliquid-home-2-stats-dashboard.png"
+    },
+    {
+      "step": 3,
+      "label": "Documentation",
+      "flow": "Home",
+      "image": "/screenshots/hyperliquid-home-3-documentation.png"
+    },
+    {
+      "step": 4,
+      "label": "HyperEVM docs",
+      "flow": "Home",
+      "image": "/screenshots/hyperliquid-home-4-hyperevm-docs.png"
+    },
+    {
+      "step": 5,
+      "label": "Portfolio",
+      "flow": "Home",
+      "image": "/screenshots/hyperliquid-home-5-portfolio.png"
+    },
+    {
+      "step": 6,
+      "label": "Leaderboard",
+      "flow": "Home",
+      "image": "/screenshots/hyperliquid-home-6-leaderboard.png"
+    },
+    {
+      "step": 7,
+      "label": "Referrals",
+      "flow": "Home",
+      "image": "/screenshots/hyperliquid-home-7-referrals.png"
+    },
+    {
+      "step": 1,
+      "label": "Trade interface",
+      "flow": "Swap",
+      "image": "/screenshots/hyperliquid-swap-1-trade-interface.png"
+    },
+    {
+      "step": 1,
+      "label": "Vaults",
+      "flow": "Staking",
+      "image": "/screenshots/hyperliquid-staking-1-vaults.png"
+    },
+    {
+      "step": 2,
+      "label": "Staking",
+      "flow": "Staking",
+      "image": "/screenshots/hyperliquid-staking-2-staking.png"
     }
   ]
 }

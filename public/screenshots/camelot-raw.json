@@ -6,62 +6,79 @@
     "width": 1440,
     "height": 900
   },
-  "crawledAt": "2026-02-14T19:17:01.742Z",
-  "totalScreenshots": 3,
-  "pageCopy": {
-    "h1": null,
-    "metaDescription": "Camelot DEX is an innovative and highly flexible DEX built to support the Arbitrum ecosystem. Community driven and capital efficient.",
-    "ogTitle": "Camelot DEX",
-    "ogDescription": "The first Orbital Liquidity Network.",
-    "ctas": [
-      "Launch App",
-      "community"
-    ],
-    "navItems": []
-  },
-  "techStack": [
-    {
-      "category": "CSS",
-      "name": "Bootstrap",
-      "evidence": "Bootstrap grid classes"
-    }
-  ],
-  "performance": {
-    "loadTime": 75,
-    "domContentLoaded": 75,
-    "lcp": null,
-    "cls": null,
-    "resourceCount": 10,
-    "transferSize": 0,
-    "breakdown": {
-      "js": 0,
-      "css": 0,
-      "images": 0,
-      "fonts": 0,
-      "other": 0
-    }
-  },
+  "crawledAt": "2026-02-22T01:54:57.707Z",
+  "totalScreenshots": 10,
+  "source": "browser-use",
   "screens": [
     {
       "index": 1,
       "filename": "camelot-raw-001.png",
       "url": "https://camelot.exchange/",
       "action": "landing",
-      "context": "Landing page"
+      "context": "Homepage"
     },
     {
       "index": 2,
       "filename": "camelot-raw-002.png",
-      "url": "https://app.camelot.exchange/",
-      "action": "page",
-      "context": "Launch App (/)"
+      "url": "https://docs.camelot.exchange/",
+      "action": "navigate",
+      "context": "Documentation"
     },
     {
       "index": 3,
       "filename": "camelot-raw-003.png",
-      "url": "https://docs.camelot.exchange/",
-      "action": "page",
-      "context": "home (/)"
+      "url": "https://camelotdex.medium.com/",
+      "action": "navigate",
+      "context": "Blog (Medium)"
+    },
+    {
+      "index": 4,
+      "filename": "camelot-raw-004.png",
+      "url": "https://app.camelot.exchange/pools",
+      "action": "navigate",
+      "context": "Liquidity Pools"
+    },
+    {
+      "index": 5,
+      "filename": "camelot-raw-005.png",
+      "url": "https://app.camelot.exchange/",
+      "action": "navigate",
+      "context": "Swap"
+    },
+    {
+      "index": 6,
+      "filename": "camelot-raw-006.png",
+      "url": "https://app.camelot.exchange/protocols",
+      "action": "navigate",
+      "context": "Roundtable"
+    },
+    {
+      "index": 7,
+      "filename": "camelot-raw-007.png",
+      "url": "https://paladinsec.co/projects/camelot/",
+      "action": "navigate",
+      "context": "Audit Report"
+    },
+    {
+      "index": 8,
+      "filename": "camelot-raw-008.png",
+      "url": "https://info.camelot.exchange/home/arbitrum/v3",
+      "action": "navigate",
+      "context": "Analytics"
+    },
+    {
+      "index": 9,
+      "filename": "camelot-raw-009.png",
+      "url": "https://app.camelot.exchange/protocols",
+      "action": "navigate",
+      "context": "FAQ"
+    },
+    {
+      "index": 10,
+      "filename": "camelot-raw-010.png",
+      "url": "https://app.camelot.exchange/bridge",
+      "action": "navigate",
+      "context": "Bridge"
     }
   ]
 }

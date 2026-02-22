@@ -1,15 +1,51 @@
 {
   "slug": "aqua",
-  "url": "https://aquawallet.io",
-  "crawledAt": "2026-02-14T11:12:37.941Z",
-  "totalScreenshots": 1,
-  "totalStates": 1,
+  "url": "",
+  "crawledAt": "2026-02-22T02:27:28.824Z",
+  "totalScreenshots": 7,
+  "totalStates": 7,
   "screens": [
     {
       "step": 1,
-      "label": "Landing page",
+      "label": "Homepage",
       "flow": "Home",
-      "image": "/screenshots/aqua-home-1-landing-page.png"
+      "image": "/screenshots/aqua-home-1-homepage.png"
+    },
+    {
+      "step": 2,
+      "label": "Features",
+      "flow": "Home",
+      "image": "/screenshots/aqua-home-2-features.png"
+    },
+    {
+      "step": 3,
+      "label": "Download",
+      "flow": "Home",
+      "image": "/screenshots/aqua-home-3-download.png"
+    },
+    {
+      "step": 4,
+      "label": "Footer",
+      "flow": "Home",
+      "image": "/screenshots/aqua-home-4-footer.png"
+    },
+    {
+      "step": 1,
+      "label": "Contact",
+      "flow": "Settings",
+      "image": "/screenshots/aqua-settings-1-contact.png"
+    },
+    {
+      "step": 2,
+      "label": "Privacy",
+      "flow": "Settings",
+      "image": "/screenshots/aqua-settings-2-privacy.png"
+    },
+    {
+      "step": 3,
+      "label": "Terms",
+      "flow": "Settings",
+      "image": "/screenshots/aqua-settings-3-terms.png"
     }
   ]
 }
