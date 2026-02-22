@@ -10,7 +10,7 @@
  *   node scripts/recrawl-stale.mjs --days 7 --auth-only   # login/wallet apps only (CI)
  */
 
-import { readFileSync } from "fs";
+import { readFileSync, existsSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
 import { parseArgs } from "util";
@@ -101,9 +101,26 @@ if (args["dry-run"]) {
   process.exit(0);
 }
 
+// ─── Browser Use fallback config ─────────────────────────────────────
+
+const BROWSER_USE_API_KEY = process.env.BROWSER_USE_API_KEY;
+const FALLBACK_THRESHOLD = 5; // If Playwright produces ≤5 screenshots, try Browser Use
+const SCREENSHOT_DIR = resolve(PROJECT_ROOT, "public/screenshots");
+
+function getRawScreenshotCount(slug) {
+  const rawPath = resolve(SCREENSHOT_DIR, `${slug}-raw.json`);
+  if (!existsSync(rawPath)) return 0;
+  try {
+    const raw = JSON.parse(readFileSync(rawPath, "utf-8"));
+    return raw.totalScreenshots || raw.screens?.length || raw.pages?.length || 0;
+  } catch {
+    return 0;
+  }
+}
+
 // ─── Recrawl ────────────────────────────────────────────────────────────
 
-const results = { success: [], failed: [], skipped: [] };
+const results = { success: [], failed: [], skipped: [], fallback: [] };
 
 for (let i = 0; i < stale.length; i++) {
   const app = stale[i];
@@ -120,25 +137,75 @@ for (let i = 0; i < stale.length; i++) {
   if (app.authType === "wallet") crawlArgs.push("--wallet");
   if (app.authType === "login") crawlArgs.push("--login");
 
-  const steps = [
-    { label: "Crawling", cmd: "crawl-app.mjs", args: crawlArgs, timeout: 600000 },
-    { label: "Labeling", cmd: "label-local.mjs", args: ["--slug", app.slug], timeout: 120000 },
+  // Step 1: Try Playwright crawl
+  let playwrightOk = true;
+  try {
+    execFileSync("node", [resolve(__dirname, "crawl-app.mjs"), ...crawlArgs], {
+      stdio: "inherit",
+      cwd: PROJECT_ROOT,
+      timeout: 600000,
+    });
+  } catch (err) {
+    console.error(`    Playwright crawl failed: ${err.message}`);
+    playwrightOk = false;
+  }
+
+  // Step 2: Check screenshot count — fallback to Browser Use if too few
+  // Note: if Playwright crashed, the old raw.json may still have a high count
+  // from a previous crawl, so we always fallback when Playwright fails
+  const screenshotCount = getRawScreenshotCount(app.slug);
+  let usedFallback = false;
+  const needsFallback = !playwrightOk || screenshotCount <= FALLBACK_THRESHOLD;
+
+  if (needsFallback && BROWSER_USE_API_KEY) {
+    const reason = !playwrightOk
+      ? "Playwright failed"
+      : `only ${screenshotCount} screenshots`;
+    console.log(`    Browser Use fallback triggered (${reason})...`);
+
+    try {
+      execFileSync(
+        "node",
+        [resolve(__dirname, "browser-use-fallback.mjs"), "--slug", app.slug],
+        {
+          stdio: "inherit",
+          cwd: PROJECT_ROOT,
+          timeout: 360000, // 6 min (includes API polling)
+          env: { ...process.env, BROWSER_USE_API_KEY },
+        },
+      );
+      usedFallback = true;
+      results.fallback.push(app.name);
+    } catch (err) {
+      console.error(`    Browser Use fallback failed: ${err.message}`);
+    }
+  } else if (needsFallback && !BROWSER_USE_API_KEY) {
+    console.log(`    No BROWSER_USE_API_KEY — skipping fallback (${screenshotCount} screenshots)`);
+  }
+
+  // Step 3: Label — use the appropriate labeler
+  const labelCmd = usedFallback ? "label-browser-use.mjs" : "label-local.mjs";
+
+  const postSteps = [
+    { label: "Labeling", cmd: labelCmd, args: ["--slug", app.slug], timeout: 120000 },
     { label: "Tagging", cmd: "auto-tag.mjs", args: ["--slug", app.slug], timeout: 120000 },
     { label: "Syncing", cmd: "sync-manifests.mjs", args: ["--slug", app.slug], timeout: 120000 },
   ];
 
-  let ok = true;
-  for (const step of steps) {
-    try {
-      execFileSync("node", [resolve(__dirname, step.cmd), ...step.args], {
-        stdio: "inherit",
-        cwd: PROJECT_ROOT,
-        timeout: step.timeout,
-      });
-    } catch (err) {
-      console.error(`    ${step.label} failed: ${err.message}`);
-      ok = false;
-      break;
+  let ok = playwrightOk || usedFallback;
+  if (ok) {
+    for (const step of postSteps) {
+      try {
+        execFileSync("node", [resolve(__dirname, step.cmd), ...step.args], {
+          stdio: "inherit",
+          cwd: PROJECT_ROOT,
+          timeout: step.timeout,
+        });
+      } catch (err) {
+        console.error(`    ${step.label} failed: ${err.message}`);
+        ok = false;
+        break;
+      }
     }
   }
 
@@ -156,4 +223,7 @@ console.log(`  Recrawl complete:`);
 console.log(`    Success: ${results.success.length}`);
 console.log(`    Failed: ${results.failed.length}`);
 console.log(`    Skipped (needs login): ${results.skipped.length}`);
+if (results.fallback.length > 0) {
+  console.log(`    Browser Use fallback: ${results.fallback.length} (${results.fallback.join(", ")})`);
+}
 console.log(`${"─".repeat(60)}`);

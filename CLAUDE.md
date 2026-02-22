@@ -31,6 +31,8 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 | `tailwind.config.ts` | Dark theme color palette |
 | `scripts/crawl-app.mjs` | Deterministic Playwright crawler ($0 API cost) |
 | `scripts/label-local.mjs` | Local flow classification + file renaming |
+| `scripts/browser-use-fallback.mjs` | Browser Use cloud fallback crawler (REST API) |
+| `scripts/label-browser-use.mjs` | Browser Use manifest labeler (pages → screens) |
 | `scripts/auto-tag.mjs` | Auto-infer screen tags from labels |
 | `scripts/wallet-setup.mjs` | MetaMask extension setup for DeFi crawling |
 | `scripts/fetch-logos.mjs` | Fetch app logos from free favicon/logo APIs |
@@ -76,14 +78,17 @@ Darkscreen is a product intelligence platform for crypto. We systematically scre
 
 ## Capture Pipeline
 
-Zero-cost, fully local pipeline — no API calls required.
+Primarily local and free. Browser Use cloud fallback (~$0.006/step) activates automatically when Playwright fails.
 
 ```
-crawl-app.mjs            →  raw screenshots + {slug}-raw.json
-label-local.mjs          →  renamed files + {slug}-manifest.json
-auto-tag.mjs             →  tags added to apps.ts screen entries
-build-screen-analysis.mjs →  per-screen analysis data (runs before next build)
-detect-elements.mjs      →  UI component bounding boxes (Claude Vision)
+crawl-app.mjs              →  raw screenshots + {slug}-raw.json
+  ↓ (if ≤5 screenshots)
+browser-use-fallback.mjs   →  cloud fallback screenshots + {slug}-raw.json (pages format)
+label-local.mjs            →  renamed files + {slug}-manifest.json (Playwright)
+label-browser-use.mjs      →  renamed files + {slug}-manifest.json (Browser Use)
+auto-tag.mjs               →  tags added to apps.ts screen entries
+build-screen-analysis.mjs  →  per-screen analysis data (runs before next build)
+detect-elements.mjs        →  UI component bounding boxes (Claude Vision)
 ```
 
 ### Crawl modes
@@ -110,22 +115,38 @@ node scripts/crawl-app.mjs --slug uniswap --wallet
 node scripts/crawl-app.mjs --all
 ```
 
-### Browser Use MCP (Playwright fallback)
+### Browser Use fallback (automated + MCP)
 
-When the local Playwright crawler (`crawl-app.mjs`) fails — e.g. bot detection, CAPTCHA walls, Cloudflare challenges, or CI environment issues — a cloud browser fallback is available via the **Browser Use MCP**.
+When Playwright produces too few screenshots (≤5) or fails entirely, a cloud browser fallback kicks in automatically via the Browser Use REST API (~$0.006/step).
 
-- **What it is:** A cloud-hosted browser automation API (browser-use.com) exposed as an MCP server
-- **When to use it:** Only when Playwright fails. Not a replacement for the local pipeline.
-- **How it's configured:** MCP server entry in `~/.claude.json` under the Darkscreen project (API key stored there, not in the repo)
-- **Cost:** ~$0.006 per step (vs $0.00 for local Playwright)
-- **Available tools:** `browser_task`, `monitor_task`, `list_browser_profiles`, `list_skills`, `get_cookies`
+**Automated pipeline fallback (CI):**
 
-**Typical fallback workflow:**
-1. Playwright crawl fails for an app (bot detection, network error, etc.)
-2. Use `browser_task` to visit the app URL in a cloud browser and capture the needed information
-3. The cloud browser has its own stealth/fingerprinting, so it often bypasses blocks that trip up local Playwright
+```
+crawl-app.mjs → check raw screenshot count →
+  if ≤5 and BROWSER_USE_API_KEY set:
+    browser-use-fallback.mjs → label-browser-use.mjs
+  else:
+    label-local.mjs
+→ auto-tag.mjs → sync-manifests.mjs
+```
 
-**Important:** This is a paid API. Always try the local Playwright crawler first. Only fall back to Browser Use when Playwright cannot complete the job.
+- **Threshold:** ≤5 usable screenshots triggers fallback
+- **Script:** `scripts/browser-use-fallback.mjs` — calls Browser Use REST API directly (no MCP needed)
+- **Labeler:** `scripts/label-browser-use.mjs` — converts Browser Use `pages` format to standard `screens` manifest
+- **GitHub Secret:** `BROWSER_USE_API_KEY` — required for CI fallback
+- **Cost:** ~$0.15-0.20 per app (~12 steps), ~$3.50 for 21 failing apps
+
+```bash
+# Manual fallback for a single app
+BROWSER_USE_API_KEY=... node scripts/browser-use-fallback.mjs --slug frame --url https://frame.sh
+node scripts/label-browser-use.mjs --slug frame
+```
+
+**Interactive fallback (Claude Code / MCP):**
+
+The Browser Use MCP server is also available for ad-hoc investigation when you need to manually inspect a site that blocks Playwright. Tools: `browser_task`, `monitor_task`, `list_browser_profiles`, `list_skills`, `get_cookies`.
+
+**Important:** Always try free local Playwright first. Browser Use is a paid API fallback.
 
 ## App Logos
 
@@ -340,13 +361,14 @@ Screenshots are automatically refreshed every Monday via GitHub Actions.
 **Pipeline steps (public crawl — 6 AM UTC):**
 1. Download current screenshots from R2 (via Cloudflare REST API)
 2. Archive them locally (for diffing)
-3. Recrawl stale public apps (7+ days old, login apps auto-skipped)
+3. Recrawl stale public apps (7+ days old, login apps auto-skipped). If Playwright fails or produces ≤5 screenshots, Browser Use cloud fallback activates automatically.
 4. Diff new screenshots against archive (pixel-level via `pixelmatch`)
 5. Generate auto-detected change records
-6. Send weekly digest email (via Brevo)
-7. Upload new screenshots to R2
-8. Commit data changes (`apps.ts`, `auto-changes.ts`)
-9. Build and deploy to Cloudflare Pages
+6. Extract OCR bounding boxes for text search
+7. Send weekly digest email (via Brevo)
+8. Upload new screenshots to R2
+9. Commit data changes (`apps.ts`, `auto-changes.ts`, `ocr-boxes.json`)
+10. Build and deploy to Cloudflare Pages
 
 **Auth crawl pipeline** (`.github/workflows/weekly-crawl-auth.yml` — 9 AM UTC):
 1. Download + decrypt Chromium profiles from R2
@@ -377,6 +399,7 @@ Screenshots are automatically refreshed every Monday via GitHub Actions.
 | `CLOUDFLARE_API_TOKEN` | API token with Cloudflare Pages (Edit) + Workers R2 Storage (Edit) |
 | `BREVO_API_KEY` | Brevo transactional API key (weekly digest email) |
 | `DARKSCREEN_CRED_KEY` | AES-256 encryption key for Chromium profile sync |
+| `BROWSER_USE_API_KEY` | Browser Use cloud browser API key (Playwright fallback) |
 
 **R2 bucket:** `darkscreen-screenshots` — stores all labeled screenshots (not raw).
 

@@ -50,6 +50,8 @@ jobs:
       # ─── Recrawl stale public apps ─────────────────────────────
       # Login apps are auto-skipped by recrawl-stale.mjs
       - name: Recrawl stale apps (7+ days old)
+        env:
+          BROWSER_USE_API_KEY: ${{ secrets.BROWSER_USE_API_KEY }}
         run: node scripts/recrawl-stale.mjs --days 7
 
       # ─── Diff & generate change records ────────────────────────

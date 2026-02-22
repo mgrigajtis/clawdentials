@@ -7,19 +7,23 @@ How Darkscreen screenshots every crypto product, classifies the screens, and get
 The pipeline has 4 stages. Each one is a standalone script. You run them in order.
 
 ```
-crawl-app.mjs  -->  label-local.mjs  -->  sync-manifests.mjs  -->  auto-tag.mjs
-   (crawl)             (label)               (sync)                 (tag)
+crawl-app.mjs  -->  label  -->  sync-manifests.mjs  -->  auto-tag.mjs
+   (crawl)         (label)          (sync)                 (tag)
+                     ↑
+              Playwright OK?
+            ┌── yes: label-local.mjs
+            └── no:  browser-use-fallback.mjs → label-browser-use.mjs
 ```
 
-**Stage 1 — Crawl.** Playwright opens a real browser, visits every page on the app's website, and takes screenshots. Outputs numbered PNGs (`metamask-raw-001.png`, `metamask-raw-002.png`, ...) and a `metamask-raw.json` manifest with metadata.
+**Stage 1 — Crawl.** Playwright opens a real browser, visits every page on the app's website, and takes screenshots. Outputs numbered PNGs (`metamask-raw-001.png`, `metamask-raw-002.png`, ...) and a `metamask-raw.json` manifest with metadata. If Playwright fails or produces ≤5 screenshots, the Browser Use cloud fallback activates automatically (see below).
 
-**Stage 2 — Label.** Reads the raw manifest, classifies each screenshot into a flow (Home, Onboarding, Swap, Send, Staking, Settings), generates a human-readable label, and renames the files. `metamask-raw-001.png` becomes `metamask-home-1-landing-page.png`. Outputs `metamask-manifest.json`.
+**Stage 2 — Label.** Reads the raw manifest, classifies each screenshot into a flow (Home, Onboarding, Swap, Send, Staking, Settings), generates a human-readable label, and renames the files. `metamask-raw-001.png` becomes `metamask-home-1-landing-page.png`. Outputs `metamask-manifest.json`. Two labelers exist: `label-local.mjs` for Playwright manifests (uses URL patterns) and `label-browser-use.mjs` for Browser Use manifests (uses label keywords).
 
 **Stage 3 — Sync.** Reads the labeled manifests and writes the screen data into `src/data/apps.ts` — the single TypeScript file that powers the entire site. Updates the app's `screens` array, `screenCount`, `thumbnail`, and `lastUpdated`.
 
 **Stage 4 — Tag.** Reads `apps.ts` and adds semantic tags to screens that don't have them yet. Tags like "Modal/Dialog", "Form/Input", "Dashboard/Overview" are inferred from the label text and flow classification. These tags power the filtering UI.
 
-**Cost: $0.00.** The entire pipeline runs locally with zero API calls.
+**Cost:** $0.00 for Playwright. Browser Use fallback costs ~$0.15-0.20 per app (~$0.006/step).
 
 ---
 
@@ -328,19 +332,21 @@ The entire pipeline runs automatically every Monday via GitHub Actions. No manua
 ### How it works
 
 ```
-Download from R2 → Archive → Recrawl stale → Diff → Generate changes → Upload to R2 → Commit → Build → Deploy
+Download from R2 → Archive → Recrawl stale (+ Browser Use fallback) → Diff → Generate changes → OCR → Email → Upload to R2 → Commit → Build → Deploy
 ```
 
 | Step | Script | What happens |
 |------|--------|-------------|
 | 1. Download | `download-r2-screenshots.sh` | Pulls current screenshots from R2 via Cloudflare REST API so they can be archived and diffed |
 | 2. Archive | `archive-screens.mjs --all` | Copies screenshots + manifests to `public/screenshots/archive/{slug}/{date}/` |
-| 3. Recrawl | `recrawl-stale.mjs --days 7` | Re-crawls public apps not updated in 7+ days. Runs the full local pipeline (crawl → label → tag → sync) per app. Skips login apps. |
+| 3. Recrawl | `recrawl-stale.mjs --days 7` | Re-crawls public apps not updated in 7+ days. Runs Playwright first; if it fails or produces ≤5 screenshots, Browser Use cloud fallback activates automatically. Skips login apps. |
 | 4. Diff | `diff-screens.mjs --all` | Pixel-level comparison (via `pixelmatch`) of new vs archived screenshots. Writes `{slug}-diff.json` |
 | 5. Changes | `generate-changes.mjs --all` | Reads diff JSON, generates `src/data/auto-changes.ts` with change type and description |
-| 6. Upload | `upload-screenshots.sh --all` | Uploads new/changed screenshots to R2 bucket `darkscreen-screenshots` |
-| 7. Commit | git | Commits `apps.ts` and `auto-changes.ts` if changed |
-| 8. Deploy | wrangler | Builds Next.js static export and deploys to Cloudflare Pages |
+| 6. OCR | `extract-ocr-boxes.mjs` | Extracts OCR bounding boxes for text search from new screenshots |
+| 7. Email | `send-weekly-digest.mjs` | Builds and sends weekly digest email via Brevo |
+| 8. Upload | `upload-screenshots.sh --all` | Uploads new/changed screenshots to R2 bucket `darkscreen-screenshots` |
+| 9. Commit | git | Commits `apps.ts`, `auto-changes.ts`, and `ocr-boxes.json` if changed |
+| 10. Deploy | wrangler | Builds Next.js static export and deploys to Cloudflare Pages |
 
 ### Required GitHub Secrets
 
@@ -350,6 +356,8 @@ These must be set at **Settings > Secrets and variables > Actions** in the GitHu
 |--------|-----------------|
 | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare dashboard sidebar |
 | `CLOUDFLARE_API_TOKEN` | Cloudflare > Profile > API Tokens. Needs: **Cloudflare Pages (Edit)** + **Workers R2 Storage (Edit)** |
+| `BREVO_API_KEY` | Brevo > SMTP & API > API Keys. For weekly digest emails. |
+| `BROWSER_USE_API_KEY` | browser-use.com dashboard. For cloud browser fallback when Playwright fails. |
 
 ### What it skips
 
@@ -410,9 +418,9 @@ All optional. The pipeline works with zero configuration for public apps.
 
 ---
 
-## Fallback: Browser Use MCP (Cloud Browser)
+## Browser Use Fallback (Cloud Browser)
 
-When the local Playwright crawler fails, a cloud-based browser fallback is available via the **Browser Use** MCP server (browser-use.com).
+When Playwright fails or produces too few screenshots, Browser Use (browser-use.com) provides an automated cloud browser fallback.
 
 ### Why it exists
 
@@ -425,44 +433,49 @@ Some sites actively block automated browsers. Common failure modes for local Pla
 | CI environment blocks | Headless Chrome detected and blocked | Cloud browser runs in a full desktop environment |
 | Geo-restricted content | 403 or region-locked page | Cloud browser exits from US data centers |
 
-### How it's configured
+### How it works
 
-The MCP server is configured in `~/.claude.json` under the Darkscreen project entry. The API key is stored there (not in the repo, not committed to git). It connects via `npx mcp-remote` to the Browser Use API.
+The fallback is fully automated in the pipeline. `recrawl-stale.mjs` handles the logic:
 
-### Available tools
+1. Playwright crawl runs first (free, local)
+2. If Playwright fails or produces ≤5 screenshots, `browser-use-fallback.mjs` runs automatically
+3. The fallback calls the Browser Use REST API directly (`POST /run-task`, polls status, downloads screenshots)
+4. `label-browser-use.mjs` converts the Browser Use manifest (`pages` format) to the standard labeled manifest (`screens` format)
+5. The rest of the pipeline (tag → sync) runs normally
 
-| Tool | Purpose |
-|------|---------|
-| `browser_task` | Run a browser automation task (visit URL, click, extract data) |
-| `monitor_task` | Poll task progress and get results |
-| `list_browser_profiles` | List saved cloud browser profiles (for authenticated sites) |
-| `list_skills` | List pre-built automation skills |
-| `get_cookies` | Extract cookies from a browser profile |
+### Scripts
 
-### When to use it
+| Script | Purpose |
+|--------|---------|
+| `scripts/browser-use-fallback.mjs` | Calls Browser Use REST API, downloads screenshots, writes `{slug}-raw.json` in `pages` format |
+| `scripts/label-browser-use.mjs` | Converts Browser Use `pages` manifest to standard `screens` manifest with flow classification |
 
-1. **Try Playwright first.** It's free and local.
-2. **If Playwright fails**, use `browser_task` to visit the same URL in a cloud browser.
-3. **For investigation**, use it to check what a site looks like from a clean browser (no extensions, fresh IP).
+### Commands
+
+```bash
+# Automated fallback (handled by recrawl-stale.mjs)
+BROWSER_USE_API_KEY=... node scripts/recrawl-stale.mjs --days 7
+
+# Manual fallback for a single app
+BROWSER_USE_API_KEY=... node scripts/browser-use-fallback.mjs --slug frame --url https://frame.sh
+node scripts/label-browser-use.mjs --slug frame
+node scripts/auto-tag.mjs --slug frame
+node scripts/sync-manifests.mjs --slug frame
+
+# Preview without API calls
+node scripts/browser-use-fallback.mjs --slug frame --url https://frame.sh --dry-run
+```
 
 ### Cost
 
-~$0.006 per browser step. A simple page visit is 1-2 steps (~$0.01). A multi-page crawl of 10 steps costs ~$0.06. Always prefer the free local Playwright crawler.
+~$0.006 per browser step. A typical crawl visits 8-12 pages = ~$0.15-0.20 per app. Always prefer the free local Playwright crawler — Browser Use only activates when Playwright can't do the job.
 
-### Example: Fallback crawl
+### Interactive fallback (MCP)
 
-```
-# 1. Playwright fails
-node scripts/crawl-app.mjs --slug someapp
-# Error: Page blocked by Cloudflare challenge
+The Browser Use MCP server is also available in Claude Code for ad-hoc investigation (checking what a blocked site looks like from a clean browser). Tools: `browser_task`, `monitor_task`, `list_browser_profiles`, `list_skills`, `get_cookies`. Configured in `~/.claude.json` under the Darkscreen project.
 
-# 2. Fall back to Browser Use via Claude Code
-# Ask Claude: "Use browser_task to visit https://someapp.com and describe what you see"
-# Claude uses the MCP tool to visit the site in a cloud browser
-```
+### Limitations
 
-### What it can NOT do
-
-- It does not integrate with the local pipeline (label → sync → tag). It's for ad-hoc investigation and manual fallback, not automated batch crawling.
-- Screenshots taken by Browser Use are not automatically saved to `public/screenshots/`.
-- It has no access to MetaMask or saved login profiles from the local Playwright setup.
+- No access to MetaMask or saved login profiles — only works for public crawls
+- Cloud browser screenshots are 1920x1080 desktop viewport only
+- Multi-line labels from Browser Use can break `apps.ts` string literals — `label-browser-use.mjs` sanitizes these
