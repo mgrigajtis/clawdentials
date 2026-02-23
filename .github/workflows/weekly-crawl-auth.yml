@@ -65,8 +65,8 @@ jobs:
         run: bash scripts/upload-profiles.sh
 
       # ─── Diff & generate change records ────────────────────────
-      - name: Diff screenshots against archive
-        run: node scripts/diff-screens.mjs --all
+      - name: Diff screenshots against archive (auth apps only)
+        run: node scripts/diff-screens.mjs --all --auth-only
 
       - name: Generate auto-detected changes
         run: node scripts/generate-changes.mjs --all

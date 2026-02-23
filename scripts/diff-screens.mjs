@@ -29,6 +29,7 @@ const { values: args } = parseArgs({
   options: {
     slug: { type: "string" },
     all: { type: "boolean", default: false },
+    "auth-only": { type: "boolean", default: false },
     threshold: { type: "string", default: "2" },
     visual: { type: "boolean", default: false },
   },
@@ -36,6 +37,20 @@ const { values: args } = parseArgs({
 });
 
 const DIFF_THRESHOLD = parseFloat(args.threshold);
+
+// ─── Auth type lookup (for --auth-only filter) ───────────────────────────
+
+function loadAuthTypes() {
+  const APPS_FILE = resolve(PROJECT_ROOT, "src/data/apps.ts");
+  const raw = readFileSync(APPS_FILE, "utf-8");
+  const map = new Map();
+  const re = /\{\s*slug:\s*"([^"]+)"[\s\S]*?authType:\s*"([^"]+)"/g;
+  let m;
+  while ((m = re.exec(raw)) !== null) {
+    map.set(m[1], m[2]);
+  }
+  return map;
+}
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
 
@@ -285,10 +300,21 @@ if (!args.slug && !args.all) {
 console.log(`🔎 Visual diff (threshold: ${DIFF_THRESHOLD}%)${args.visual ? " + overlay PNGs" : ""}\n`);
 
 if (args.all) {
-  const manifests = readdirSync(SCREENSHOT_DIR).filter(
+  let manifests = readdirSync(SCREENSHOT_DIR).filter(
     (f) => f.endsWith("-manifest.json") && !f.endsWith("-raw.json")
   );
-  console.log(`Found ${manifests.length} manifest(s)\n`);
+
+  if (args["auth-only"]) {
+    const authTypes = loadAuthTypes();
+    manifests = manifests.filter((f) => {
+      const slug = f.replace("-manifest.json", "");
+      const authType = authTypes.get(slug) || "public";
+      return authType !== "public";
+    });
+    console.log(`Filtered to ${manifests.length} auth app(s)\n`);
+  } else {
+    console.log(`Found ${manifests.length} manifest(s)\n`);
+  }
 
   let diffed = 0;
   for (const file of manifests) {
