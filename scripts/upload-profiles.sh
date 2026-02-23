@@ -8,7 +8,7 @@
 set -euo pipefail
 
 BUCKET="darkscreen-screenshots"
-PROFILES_DIR="data/profiles"
+PROFILES_DIR="scripts/profiles"
 
 # ─── Validate env ───────────────────────────────────────────────────
 if [[ -z "${DARKSCREEN_CRED_KEY:-}" ]]; then

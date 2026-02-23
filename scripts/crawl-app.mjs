@@ -795,6 +795,12 @@ async function attemptReauth(context, page, slug, authConfig = {}) {
 // ─── Human-in-the-loop fallback ───────────────────────────────────────
 
 async function humanInTheLoop(context, page, slug, targetUrl) {
+  // Skip headed fallback in CI — no display server available
+  if (process.env.CI) {
+    console.log("  Skipping manual login (CI environment — no display).");
+    return null;
+  }
+
   console.log("\n  Manual login required. Opening headed browser...");
 
   // Close the headless context — profile is persisted on disk
